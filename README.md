@@ -18,7 +18,7 @@ README.md → Explicação principal do projeto
 .gitignore → Arquivos/pastas a ignorar (ex: node_modules, .env)
 LICENSE → Licença do projeto
 ## Protótipo
-Link para o protótipo no Figma: (https://www.figma.com/make/yF1tjl8ZxyrRaTiKA0lmh5/Descriptive-Citizen-Rights-Website?p=f)
+Link para o protótipo no Figma: (https://www.figma.com/make/h9XdFFGiY3DLjpPgv3auYQ/Criar-site-anexado?t=yNKBXuRFUIm7sZVq-1)
 ## Integrantes
 - Isadora Souza Zanni - Front-end
 - Rapahel Tose Carneiro – Front-end
