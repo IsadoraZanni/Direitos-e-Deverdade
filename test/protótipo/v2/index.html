@@ -1,1 +1,1297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direitos DeVerdade - Informação Jurídica e Cidadania Clara</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- LOADING OVERLAY -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p>Carregando conteúdo...</p>
+    </div>
+
+    <!-- HEADER PRINCIPAL -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area" onclick="navigateTo('home')">
+                <div class="logo-placeholder" title="Espaço para Logotipo">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <span class="brand-name">Direitos DeVerdade</span>
+            </div>
+            
+            <nav class="header-nav">
+                <button class="nav-quiz-btn" onclick="navigateTo('quiz-home')">
+                    <i class="fa-solid fa-graduation-cap"></i> Quiz
+                </button>
+            </nav>
+        </div>
+
+        <!-- SUBMENU QUEM SOMOS -->
+        <div class="submenu-bar">
+            <div class="submenu-container">
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        Quem somos <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="navigateToAbout('sobre')"><i class="fa-solid fa-circle-info"></i> Sobre o projeto</a>
+                        <a href="#" onclick="navigateToAbout('missao')"><i class="fa-solid fa-bullseye"></i> Nossa missão</a>
+                        <a href="#" onclick="navigateToAbout('equipe')"><i class="fa-solid fa-users"></i> Equipe</a>
+                        <a href="#" onclick="navigateToAbout('instituicao')"><i class="fa-solid fa-building-columns"></i> Instituição</a>
+                        <a href="#" onclick="navigateToAbout('fontes')"><i class="fa-solid fa-book-bookmark"></i> Fontes e referências</a>
+                        <a href="#" onclick="navigateToAbout('contato')"><i class="fa-solid fa-envelope"></i> Contato</a>
+                        <a href="#" onclick="navigateToAbout('aviso')"><i class="fa-solid fa-triangle-exclamation"></i> Aviso importante</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main id="app-content" class="main-layout">
+        
+        <!-- PÁGINA INICIAL -->
+        <section id="page-home" class="page-view active">
+            <section class="hero-banner">
+                <h1>Conheça Seus Direitos, Cumpra Seus Deveres</h1>
+                <p>Informação cidadã simples, transparente e acessível para todos os brasileiros.</p>
+            </section>
+
+            <section class="main-cards-grid">
+                
+                <!-- CARD 1: Direitos e deveres -->
+                <div class="main-card" id="card-direitos">
+                    <div class="card-header-wrapper">
+                        <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h2>Direitos e Deveres</h2>
+                        <p>Explore as garantias e responsabilidades de cada grupo na sociedade civil.</p>
+                        <span class="hover-hint"><i class="fa-solid fa-arrow-pointer"></i> Passe o mouse para ver as opções</span>
+                    </div>
+                    <div class="minicards-container">
+                        <button class="minicard" onclick="openContent('direitos-cidadaos')">
+                            <i class="fa-solid fa-passport"></i>
+                            <span>Direitos e deveres dos cidadãos</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('direitos-trabalhadores')">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Direitos e deveres dos trabalhadores</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('direitos-consumidores')">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Direitos e deveres dos consumidores</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('direitos-estudantes')">
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <span>Direitos e deveres dos estudantes</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('direitos-idosos')">
+                            <i class="fa-solid fa-person-cane"></i>
+                            <span>Direitos e deveres dos idosos</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('direitos-criancas')">
+                            <i class="fa-solid fa-child"></i>
+                            <span>Direitos e deveres das crianças e adolescentes</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('direitos-pcd')">
+                            <i class="fa-solid fa-wheelchair"></i>
+                            <span>Direitos e deveres das pessoas com deficiência</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Funções de agentes públicos -->
+                <div class="main-card" id="card-agentes">
+                    <div class="card-header-wrapper">
+                        <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h2>Funções de Agentes Públicos</h2>
+                        <p>Entenda exatamente o que faz cada representante do poder executivo e legislativo.</p>
+                        <span class="hover-hint"><i class="fa-solid fa-arrow-pointer"></i> Passe o mouse para ver as opções</span>
+                    </div>
+                    <div class="minicards-container">
+                        <button class="minicard" onclick="openContent('funcao-presidente')">
+                            <i class="fa-solid fa-flag"></i>
+                            <span>Funções do Presidente da República</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('funcao-governador')">
+                            <i class="fa-solid fa-building-user"></i>
+                            <span>Funções do Governador</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('funcao-prefeito')">
+                            <i class="fa-solid fa-city"></i>
+                            <span>Funções do Prefeito</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('funcao-deputado-federal')">
+                            <i class="fa-solid fa-landmark-dome"></i>
+                            <span>Funções do Deputado Federal</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('funcao-deputado-estadual')">
+                            <i class="fa-solid fa-landmark"></i>
+                            <span>Funções do Deputado Estadual</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('funcao-senador')">
+                            <i class="fa-solid fa-building-columns"></i>
+                            <span>Funções do Senador</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('funcao-vereador')">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                            <span>Funções do Vereador</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Leis -->
+                <div class="main-card" id="card-leis">
+                    <div class="card-header-wrapper">
+                        <div class="card-icon"><i class="fa-solid fa-book-journal-whills"></i></div>
+                        <h2>Leis Principais</h2>
+                        <p>Consulte as normas e códigos jurídicos fundamentais do Brasil de forma descomplicada.</p>
+                        <span class="hover-hint"><i class="fa-solid fa-arrow-pointer"></i> Passe o mouse para ver as opções</span>
+                    </div>
+                    <div class="minicards-container">
+                        <button class="minicard" onclick="openContent('lei-cf88')">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Constituição Federal</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-cc')">
+                            <i class="fa-solid fa-gavel"></i>
+                            <span>Código Civil</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-cp')">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Código Penal</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-cdc')">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Código de Defesa do Consumidor</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-eca')">
+                            <i class="fa-solid fa-children"></i>
+                            <span>Estatuto da Criança e do Adolescente</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-idoso')">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <span>Estatuto do Idoso</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-maria-penha')">
+                            <i class="fa-solid fa-person-shelter"></i>
+                            <span>Lei Maria da Penha</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-lai')">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>Lei de Acesso à Informação</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-lrf')">
+                            <i class="fa-solid fa-coins"></i>
+                            <span>Lei de Responsabilidade Fiscal</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('lei-improbidade')">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <span>Lei de Improbidade Administrativa</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Onde vou se meu direito for ferido? -->
+                <div class="main-card" id="card-violacoes">
+                    <div class="card-header-wrapper">
+                        <div class="card-icon"><i class="fa-solid fa-life-ring"></i></div>
+                        <h2>Onde vou se meu direito for ferido?</h2>
+                        <p>Guia prático de orientação e órgãos competentes para buscar ajuda imediata.</p>
+                        <span class="hover-hint"><i class="fa-solid fa-arrow-pointer"></i> Passe o mouse para ver as opções</span>
+                    </div>
+                    <div class="minicards-container">
+                        <button class="minicard" onclick="openContent('violacao-trabalho')">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <span>Direitos violados no trabalho</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('violacao-escola')">
+                            <i class="fa-solid fa-school"></i>
+                            <span>Direitos violados na escola</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('violacao-saude')">
+                            <i class="fa-solid fa-hospital"></i>
+                            <span>Direitos violados na saúde</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('violacao-seguranca')">
+                            <i class="fa-solid fa-person-military-pointing"></i>
+                            <span>Direitos violados na segurança pública</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('violacao-moradia')">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span>Direitos violados na moradia</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('violacao-alimentacao')">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Direitos violados na alimentação</span>
+                        </button>
+                        <button class="minicard" onclick="openContent('violacao-educacao')">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                            <span>Direitos violados na educação</span>
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <!-- DYNAMIC CONTENT VIEW -->
+        <section id="page-content" class="page-view">
+            <div class="content-header-bar">
+                <button class="back-btn" onclick="navigateTo('home')">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar
+                </button>
+                <span class="category-badge" id="detail-category">Categoria</span>
+            </div>
+            <h1 class="detail-title" id="detail-title">Título do Conteúdo</h1>
+            
+            <div class="detail-body" id="detail-body">
+                <!-- Injetado dinamicamente via JavaScript -->
+            </div>
+        </section>
+
+        <!-- QUIZ HOME VIEW -->
+        <section id="page-quiz-home" class="page-view">
+            <div class="quiz-container text-center">
+                <span class="quiz-badge"><i class="fa-solid fa-award"></i> Quiz Interativo</span>
+                <h1>Teste Seus Conhecimentos</h1>
+                <p class="quiz-intro">Escolha uma das categorias abaixo para testar seu aprendizado sobre as leis, direitos e funcionamento do Estado brasileiro.</p>
+                
+                <div class="quiz-categories-grid">
+                    <div class="quiz-cat-card" onclick="startQuiz('leis')">
+                        <div class="cat-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3>1. Leis</h3>
+                        <p>Perguntas sobre Constituição, CDC, Código Penal e leis ordinárias.</p>
+                        <button class="start-btn">Iniciar Quiz <i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="quiz-cat-card" onclick="startQuiz('direitos')">
+                        <div class="cat-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+                        <h3>2. Direitos e Deveres</h3>
+                        <p>Questões sobre os deveres cidadãos, direitos trabalhistas e sociais.</p>
+                        <button class="start-btn">Iniciar Quiz <i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="quiz-cat-card" onclick="startQuiz('agentes')">
+                        <div class="cat-icon"><i class="fa-solid fa-landmark"></i></div>
+                        <h3>3. Funções de Agentes Públicos</h3>
+                        <p>Teste o que você sabe sobre as atribuições do Prefeito, Deputado, Senador etc.</p>
+                        <button class="start-btn">Iniciar Quiz <i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ QUESTION VIEW -->
+        <section id="page-quiz-play" class="page-view">
+            <div class="quiz-play-card">
+                <div class="quiz-header-status">
+                    <button class="back-btn-small" onclick="navigateTo('quiz-home')"><i class="fa-solid fa-xmark"></i> Sair</button>
+                    <span id="quiz-cat-title" class="quiz-cat-label">Categoria</span>
+                    <div class="progress-bar-container">
+                        <div id="quiz-progress-fill" class="progress-bar-fill" style="width: 33%;"></div>
+                    </div>
+                    <span id="quiz-step-text" class="step-text">Pergunta 1 de 3</span>
+                </div>
+
+                <div class="quiz-question-box">
+                    <h2 id="quiz-question-text">Pergunta aqui...</h2>
+                    
+                    <div class="quiz-options-list" id="quiz-options">
+                        <!-- Alternativas inseridas via JavaScript -->
+                    </div>
+
+                    <div id="quiz-feedback-box" class="quiz-feedback hidden">
+                        <!-- Feedback sobre resposta -->
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button id="quiz-next-btn" class="action-btn hidden" onclick="nextQuestion()">Próxima Pergunta <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ RESULT VIEW -->
+        <section id="page-quiz-result" class="page-view">
+            <div class="quiz-result-card text-center">
+                <div class="result-icon-wrapper" id="result-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h2>Resultado do Quiz</h2>
+                <div class="score-display">
+                    <span id="result-score-num">0</span> / <span id="result-total-num">3</span>
+                    <p>respostas corretas</p>
+                </div>
+                <p id="result-message" class="result-message-text">Sua pontuação aparecerá aqui.</p>
+
+                <div class="result-buttons">
+                    <button class="btn-primary" onclick="retryCurrentQuiz()"><i class="fa-solid fa-rotate-left"></i> Refazer Quiz</button>
+                    <button class="btn-secondary" onclick="navigateTo('home')"><i class="fa-solid fa-house"></i> Voltar para o Início</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <div class="logo-placeholder-sm"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <span>Direitos DeVerdade</span>
+                </div>
+                <p>Plataforma educativa focada no fortalecimento da cidadania, transparência pública e acesso simplificado ao direito.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#" onclick="navigateTo('home')">Início</a></li>
+                    <li><a href="#" onclick="navigateToAbout('sobre')">Quem somos</a></li>
+                    <li><a href="#" onclick="navigateTo('quiz-home')">Quiz Interativo</a></li>
+                    <li><a href="#" onclick="navigateToAbout('contato')">Contato</a></li>
+                    <li><a href="#" onclick="navigateToAbout('fontes')">Fontes e Referências</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-envelope"></i> contato@direitosdeverdade.org.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> Brasil - Projeto Nacional de Cidadania</p>
+            </div>
+
+            <div class="footer-col aviso-col">
+                <h4><i class="fa-solid fa-circle-exclamation"></i> Aviso Importante</h4>
+                <p class="aviso-text">O conteúdo deste site possui finalidade estritamente informativa e educacional e não substitui orientação jurídica profissional prestada por advogados ou Defensoria Pública.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Direitos DeVerdade. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LÓGICA E DADOS -->
+    <script>
+        // BASE DE DADOS DOS CONTEÚDOS
+        const contentDatabase = {
+            // DIREITOS E DEVERES
+            'direitos-cidadaos': {
+                category: 'Direitos e Deveres',
+                title: 'Direitos e Deveres dos Cidadãos',
+                type: 'standard',
+                summary: 'A cidadania compreende o conjunto de direitos e deveres fundamentais que garantem a convivência harmônica e participativa na sociedade.',
+                sections: [
+                    {
+                        heading: '1. O que são os Direitos Fundamentais?',
+                        text: 'Garantias essenciais expressas no Artigo 5º da Constituição Federal, tais como o direito à vida, à liberdade, à igualdade, à segurança e à propriedade.'
+                    },
+                    {
+                        heading: '2. Principais Deveres do Cidadão',
+                        text: 'Votar nas eleições públicas, cumprir as leis do país, respeitar os direitos alheios, proteger o patrimônio público e meio ambiente e pagar impostos devidos.'
+                    },
+                    {
+                        heading: '3. Exemplo Prático no Dia a Dia',
+                        text: 'Quando você exige uma nota fiscal ao comprar algo, está exercendo o direito do consumidor e auxiliando no cumprimento do dever fiscal do Estado.'
+                    }
+                ]
+            },
+            'direitos-trabalhadores': {
+                category: 'Direitos e Deveres',
+                title: 'Direitos e Deveres dos Trabalhadores',
+                type: 'standard',
+                summary: 'Garantias trabalhistas previstas na Consolidação das Leis do Trabalho (CLT) e obrigações fundamentais do empregado no ambiente de trabalho.',
+                sections: [
+                    {
+                        heading: '1. Direitos Garantidos por Lei',
+                        text: 'Jornada máxima de 44 horas semanais, 13º salário, férias remuneradas acrescidas de 1/3, Fundo de Garantia (FGTS), aviso prévio e descanso semanal remunerado.'
+                    },
+                    {
+                        heading: '2. Deveres do Trabalhador',
+                        text: 'Pontualidade, assiduidade, zelo pelos equipamentos do empregador, sigilo das informações da empresa e cumprimento das normas de segurança do trabalho.'
+                    },
+                    {
+                        heading: '3. Exemplo Prático',
+                        text: 'Ao completar 12 meses de trabalho regido pela CLT, o trabalhador ganha o direito adquirido de gozar 30 dias de férias pagas.'
+                    }
+                ]
+            },
+            'direitos-consumidores': {
+                category: 'Direitos e Deveres',
+                title: 'Direitos e Deveres dos Consumidores',
+                type: 'standard',
+                summary: 'Regras de proteção em compras de produtos e contratação de serviços regulamentadas pelo Código de Defesa do Consumidor (CDC).',
+                sections: [
+                    {
+                        heading: '1. Principais Direitos do Consumidor',
+                        text: 'Direito de arrepender-se de compras online em até 7 dias, direito à informação clara, proteção contra propaganda enganosa e garantia legal do produto.'
+                    },
+                    {
+                        heading: '2. Deveres do Consumidor',
+                        text: 'Ler atenta e integralmente os contratos de prestação de serviços, utilizar os produtos de acordo com as instruções do fabricante e guardar notas fiscais.'
+                    },
+                    {
+                        heading: '3. Exemplo Prático',
+                        text: 'Se você contratou um plano de internet pela web e percebeu que não atende suas necessidades no 3º dia, pode cancelar sem multa pelo Direito de Arrependimento.'
+                    }
+                ]
+            },
+            'direitos-estudantes': {
+                category: 'Direitos e Deveres',
+                title: 'Direitos e Deveres dos Estudantes',
+                type: 'standard',
+                summary: 'Normas relativas ao ambiente escolar e acadêmico, garantindo aprendizado de qualidade e conduta ética.',
+                sections: [
+                    {
+                        heading: '1. Direitos Estudantis',
+                        text: 'Acesso à educação gratuita na rede pública, meia-entrada em eventos culturais (com documento estudantil oficial), ambiente seguro e livre de discriminação.'
+                    },
+                    {
+                        heading: '2. Deveres dos Estudantes',
+                        text: 'Frequência regular mínima obrigatória, respeito aos professores e colegas de classe, preservação do patrimônio público escolar e dedicação aos estudos.'
+                    }
+                ]
+            },
+            'direitos-idosos': {
+                category: 'Direitos e Deveres',
+                title: 'Direitos e Deveres dos Idosos',
+                type: 'standard',
+                summary: 'Garantias prioritárias asseguradas pelo Estatuto da Pessoa Idosa a cidadãos com idade igual ou superior a 60 anos.',
+                sections: [
+                    {
+                        heading: '1. Direitos Prioritários',
+                        text: 'Atendimento preferencial em filas e órgãos públicos, gratuidade nos transportes públicos urbanos (a partir dos 65 anos), vagas reservadas em estacionamentos e desconto de 50% em eventos culturais.'
+                    },
+                    {
+                        heading: '2. Deveres da Sociedade e Família',
+                        text: 'É dever de todos prevenir a ameaça ou violação aos direitos do idoso, amparando-os e garantindo sua convivência comunitária com dignidade.'
+                    }
+                ]
+            },
+            'direitos-criancas': {
+                category: 'Direitos e Deveres',
+                title: 'Direitos e Deveres das Crianças e Adolescentes',
+                type: 'standard',
+                summary: 'Princípios do Estatuto da Criança e do Adolescente (ECA) focados na proteção integral do público jovem.',
+                sections: [
+                    {
+                        heading: '1. Direitos Fundamentais',
+                        text: 'Prioridade absoluta de proteção, direito à vida, saúde, alimentação, educação qualificada, lazer e convivência familiar segura.'
+                    },
+                    {
+                        heading: '2. Deveres das Crianças e Adolescentes',
+                        text: 'Respeitar pais, responsáveis e educadores, frequentar a escola regularmente e respeitar as regras da convivência comunitária.'
+                    }
+                ]
+            },
+            'direitos-pcd': {
+                category: 'Direitos e Deveres',
+                title: 'Direitos das Pessoas com Deficiência',
+                type: 'standard',
+                summary: 'Normas de inclusão e acessibilidade previstas no Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015).',
+                sections: [
+                    {
+                        heading: '1. Acessibilidade e Inclusão',
+                        text: 'Garantia de acessibilidade arquitetônica, reserva de cotas de emprego em empresas com mais de 100 funcionários e assentos/vagas prioritárias.'
+                    },
+                    {
+                        heading: '2. Igualdade de Oportunidades',
+                        text: 'É proibida qualquer discriminação em função da deficiência, garantindo educação inclusiva em todos os níveis do ensino público ou privado.'
+                    }
+                ]
+            },
+
+            // FUNÇÕES DE AGENTES PÚBLICOS
+            'funcao-presidente': {
+                category: 'Agentes Públicos',
+                title: 'Funções do Presidente da República',
+                type: 'standard',
+                summary: 'Chefe de Estado e do Governo Federal no sistema presidencialista brasileiro.',
+                sections: [
+                    {
+                        heading: '1. Atribuições Principais',
+                        text: 'Administrar os recursos federais, sancionar ou vetar projetos de lei aprovados pelo Congresso Nacional, nomear ministros de Estado e comandar as Forças Armadas.'
+                    },
+                    {
+                        heading: '2. O que NÃO pode fazer sozinho',
+                        text: 'Não pode criar impostos nem alterar leis fundamentais sem a aprovação da Câmara e do Senado.'
+                    }
+                ]
+            },
+            'funcao-governador': {
+                category: 'Agentes Públicos',
+                title: 'Funções do Governador',
+                type: 'standard',
+                summary: 'Chefe do Poder Executivo Estadual responsável pela administração da sua Unidade Federativa.',
+                sections: [
+                    {
+                        heading: '1. Principais Responsabilidades',
+                        text: 'Comandar as polícias Militar e Civil do Estado, administrar os hospitais estaduais, gerir a rede estadual de ensino médio e executar obras de infraestrutura estadual.'
+                    }
+                ]
+            },
+            'funcao-prefeito': {
+                category: 'Agentes Públicos',
+                title: 'Funções do Prefeito',
+                type: 'standard',
+                summary: 'Chefe do Poder Executivo Municipal focado na administração direta da cidade.',
+                sections: [
+                    {
+                        heading: '1. Áreas de Atuação',
+                        text: 'Manutenção de creches e escolas do ensino fundamental, postos de saúde de atenção primária, iluminação pública, coleta de lixo, asfaltamento e transporte coletivo municipal.'
+                    }
+                ]
+            },
+            'funcao-deputado-federal': {
+                category: 'Agentes Públicos',
+                title: 'Funções do Deputado Federal',
+                type: 'standard',
+                summary: 'Representante do povo na Câmara dos Deputados em Brasília.',
+                sections: [
+                    {
+                        heading: '1. O que faz um Deputado Federal?',
+                        text: 'Propõe, debate e vota leis federais, fiscaliza o uso do dinheiro público pelo Governo Federal e aprova o Orçamento da União.'
+                    }
+                ]
+            },
+            'funcao-deputado-estadual': {
+                category: 'Agentes Públicos',
+                title: 'Funções do Deputado Estadual',
+                type: 'standard',
+                summary: 'Membro da Assembleia Legislativa do Estado.',
+                sections: [
+                    {
+                        heading: '1. Atribuições',
+                        text: 'Elaborar e votar leis válidas para o Estado, além de fiscalizar as ações e contas do Governador.'
+                    }
+                ]
+            },
+            'funcao-senador': {
+                category: 'Agentes Públicos',
+                title: 'Funções do Senador',
+                type: 'standard',
+                summary: 'Representante dos Estados e do Distrito Federal no Senado Federal (3 senadores por Estado).',
+                sections: [
+                    {
+                        heading: '1. Papel Institucional',
+                        text: 'Julga processos de impeachment de autoridades federais, aprova indicação de magistrados dos tribunais superiores e analisa leis do país.'
+                    }
+                ]
+            },
+            'funcao-vereador': {
+                category: 'Agentes Públicos',
+                title: 'Funções do Vereador',
+                type: 'standard',
+                summary: 'Representante legislativo do município que atua na Câmara Municipal.',
+                sections: [
+                    {
+                        heading: '1. Principais Atividades',
+                        text: 'Votar leis locais (como plano diretor e regras de zoneamento), fiscalizar as contas do Prefeito e ouvir demandas dos bairros.'
+                    }
+                ]
+            },
+
+            // LEIS
+            'lei-cf88': {
+                category: 'Leis',
+                title: 'Constituição Federal de 1988',
+                type: 'standard',
+                summary: 'A Lei Fundamental e Suprema que rege todo o ordenamento jurídico do Brasil.',
+                sections: [
+                    {
+                        heading: '1. O que é a Carta Magna?',
+                        text: 'É a norma máxima do país. Nenhuma lei municipal, estadual ou federal pode contrariar os princípios da Constituição.'
+                    },
+                    {
+                        heading: '2. Cláusulas Pétreas',
+                        text: 'Direitos fundamentais como o voto direto, secreto e periódico, além da divisão dos três Poderes (Executivo, Legislativo e Judiciário), que não podem ser abolidos.'
+                    }
+                ]
+            },
+            'lei-cc': {
+                category: 'Leis',
+                title: 'Código Civil (Lei nº 10.406/2002)',
+                type: 'standard',
+                summary: 'Regula as relações jurídicas privadas entre pessoas, famílias, bens e negócios.',
+                sections: [
+                    {
+                        heading: '1. Aplicação no cotidiano',
+                        text: 'Regulamenta casamentos, contratos de aluguel, heranças, propriedade de imóveis e obrigações contratuais do dia a dia.'
+                    }
+                ]
+            },
+            'lei-cp': {
+                category: 'Leis',
+                title: 'Código Penal (Decreto-Lei nº 2.848/1940)',
+                type: 'standard',
+                summary: 'Define os crimes, contravenções penais e as penas aplicáveis.',
+                sections: [
+                    {
+                        heading: '1. Princípio da Legalidade',
+                        text: 'Não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal.'
+                    }
+                ]
+            },
+            'lei-cdc': {
+                category: 'Leis',
+                title: 'Código de Defesa do Consumidor',
+                type: 'standard',
+                summary: 'Conjunto de normas protegendo quem adquire produtos ou contrata serviços.',
+                sections: [
+                    {
+                        heading: '1. Proteção ao vulnerável',
+                        text: 'Reconhece o consumidor como a parte mais frágil da relação comercial, garantindo reparação integral de danos materiais e morais.'
+                    }
+                ]
+            },
+            'lei-eca': {
+                category: 'Leis',
+                title: 'Estatuto da Criança e do Adolescente',
+                type: 'standard',
+                summary: 'Norma de proteção às pessoas com até 18 anos de idade incompletos.',
+                sections: [
+                    {
+                        heading: '1. Doutrina da Proteção Integral',
+                        text: 'Assegura desenvolvimento físico, mental, moral e social às crianças e adolescentes sob máxima prioridade.'
+                    }
+                ]
+            },
+            'lei-idoso': {
+                category: 'Leis',
+                title: 'Estatuto da Pessoa Idosa',
+                type: 'standard',
+                summary: 'Garante direitos sociais e econômicos aos cidadãos idosos.',
+                sections: [
+                    {
+                        heading: '1. Proteção Especial',
+                        text: 'Criminaliza o descaso, negligência, violência física ou financeira contra pessoas com mais de 60 anos.'
+                    }
+                ]
+            },
+            'lei-maria-penha': {
+                category: 'Leis',
+                title: 'Lei Maria da Penha (Lei nº 11.340/2006)',
+                type: 'standard',
+                summary: 'Mecanismo para coibir a violência doméstica e familiar contra a mulher.',
+                sections: [
+                    {
+                        heading: '1. Tipos de Violência Coibidos',
+                        text: 'Física, psicológica, sexual, patrimonial e moral cometida no âmbito doméstico.'
+                    }
+                ]
+            },
+            'lei-lai': {
+                category: 'Leis',
+                title: 'Lei de Acesso à Informação (LAI)',
+                type: 'standard',
+                summary: 'Garante ao cidadão o acesso aos dados públicos de órgãos governamentais.',
+                sections: [
+                    {
+                        heading: '1. Princípio da Transparência',
+                        text: 'O acesso é a regra e o sigilo é a exceção no uso do dinheiro e gestão pública.'
+                    }
+                ]
+            },
+            'lei-lrf': {
+                category: 'Leis',
+                title: 'Lei de Responsabilidade Fiscal',
+                type: 'standard',
+                summary: 'Impõe regras para que governantes não gastem mais recursos do que arrecadam.',
+                sections: [
+                    {
+                        heading: '1. Equilíbrio de Contas',
+                        text: 'Exige transparência orçamentária e estabelece limites de gastos com pessoal público.'
+                    }
+                ]
+            },
+            'lei-improbidade': {
+                category: 'Leis',
+                title: 'Lei de Improbidade Administrativa',
+                type: 'standard',
+                summary: 'Pune agentes públicos por atos de corrupção ou enriquecimento ilícito.',
+                sections: [
+                    {
+                        heading: '1. Sanções',
+                        text: 'Perda do cargo público, ressarcimento de danos ao erário e suspensão dos direitos políticos.'
+                    }
+                ]
+            },
+
+            // ONDE VOU SE MEU DIREITO FOR FERIDO? (Páginas Estruturadas Especialmente)
+            'violacao-trabalho': {
+                category: 'Onde Procurar Ajuda?',
+                title: 'Direitos Violados no Trabalho',
+                type: 'violation',
+                section1_direito: 'Salários atrasados, ausência de depósito de FGTS, horas extras não pagas, assédio moral ou desvio de função.',
+                section2_identificar: 'Percebe-se quando o empregador descumpre as cláusulas do contrato, desrespeita os limites de jornada legal ou humilha o colaborador.',
+                section3_fazer: 'Reúna comprovantes, extratos bancários, mensagens de texto, e-mails e contatos de testemunhas antes de formalizar a denúncia.',
+                section4_ajuda: 'Procure o Sindicato da sua categoria profissional ou um advogado especialista trabalhista.',
+                organs: [
+                    { name: 'Ministério do Trabalho e Emprego (MTE)', info: 'Disque 158 para denúncias sobre trabalho irregular.' },
+                    { name: 'Ministério Público do Trabalho (MPT)', info: 'Canal seguro para denúncias de assédio moral e fraudes coletivas.' },
+                    { name: 'Justiça do Trabalho', info: 'Para ajuizar uma Reclamação Trabalhista (pode requerer assistência da Defensoria Pública).' }
+                ]
+            },
+            'violacao-escola': {
+                category: 'Onde Procurar Ajuda?',
+                title: 'Direitos Violados na Escola',
+                type: 'violation',
+                section1_direito: 'Recusa de matrícula sem justificativa legal, falta de acessibilidade para alunos PCD, casos graves de bullying ou agressão.',
+                section2_identificar: 'Situações em que o estudante é impedido de frequentar as aulas ou passa por discriminação por parte de funcionários ou colegas.',
+                section3_fazer: 'Notifique por escrito a direção e a coordenação pedagógica da escola solicitando providências formais.',
+                section4_ajuda: 'Se a escola não resolver o problema em tempo razoável, busque os órgãos de proteção do ensino.',
+                organs: [
+                    { name: 'Conselho Tutelar', info: 'Para violações de direitos de crianças e adolescentes no ambiente escolar.' },
+                    { name: 'Secretaria Municipal ou Estadual de Educação', info: 'Órgão fiscalizador do cumprimento de diretrizes educacionais.' },
+                    { name: 'Ministério Público Estadual', info: 'Promotoria de Justiça da Infância e da Juventude.' }
+                ]
+            },
+            'violacao-saude': {
+                category: 'Onde Procurar Ajuda?',
+                title: 'Direitos Violados na Saúde',
+                type: 'violation',
+                section1_direito: 'Negativa de atendimento de urgência/emergência, falta de medicamentos essenciais prescritos ou negligência médica.',
+                section2_identificar: 'Filas excessivas fora do prazo aceitável de risco, falta de médicos em postos de saúde ou recusa injustificada de planos de saúde.',
+                section3_fazer: 'Guarde todas as receitas, prontuários, protocolos de atendimento e relatórios médicos assinados.',
+                section4_ajuda: 'Procure de imediato a Ouvidoria do SUS ou o Procon em caso de plano de saúde privado.',
+                organs: [
+                    { name: 'Ouvidoria do SUS (Disque 136)', info: 'Para reclamações relativas a postos de saúde e hospitais públicos.' },
+                    { name: 'ANS (Agência Nacional de Saúde)', info: 'Fiscalização e denúncias relativas a Planos de Saúde Privados.' },
+                    { name: 'Defensoria Pública', info: 'Para obter liminar judicial urgente visando o fornecimento de remédios ou leitos de UTI.' }
+                ]
+            },
+            'violacao-seguranca': {
+                category: 'Onde Procurar Ajuda?',
+                title: 'Direitos Violados na Segurança Pública',
+                type: 'violation',
+                section1_direito: 'Abuso de autoridade, violência policial descabida, recusa no registro de Boletim de Ocorrência.',
+                section2_identificar: 'Ações arbitrárias que extrapolam os limites legais de abordagem e respeito ao cidadão.',
+                section3_fazer: 'Anote horário, local, identificação de viaturas ou nomes de agentes envolvidos e busque testemunhas.',
+                section4_ajuda: 'Apresente a denúncia formal à Ouvidoria de Polícia do Estado.',
+                organs: [
+                    { name: 'Ouvidoria da Polícia', info: 'Órgão independente para apuração de má conduta policial.' },
+                    { name: 'Corregedoria da Polícia Civil ou Militar', info: 'Processo administrativo disciplinar interno.' },
+                    { name: 'Ministério Público Estadual', info: 'Controle externo da atividade policial.' }
+                ]
+            },
+            'violacao-moradia': {
+                category: 'Onde Procurar Ajuda?',
+                title: 'Direitos Violados na Moradia',
+                type: 'violation',
+                section1_direito: 'Despejo ilegal coercitivo, falta de saneamento básico essencial ou risco estrutural sem amparo governamental.',
+                section2_identificar: 'Interrupção arbitrária de fornecimento de água/energia sem aviso prévio ou remoções forçadas sem ordem judicial.',
+                section3_fazer: 'Exija a ordem judicial escrita e notifique a Defensoria Pública do Estado.',
+                section4_ajuda: 'Consulte o núcleo especializado de moradia da Defensoria Pública.',
+                organs: [
+                    { name: 'Defensoria Pública do Estado (Núcleo de Moradia)', info: 'Assistência jurídica gratuita à população vulnerável.' },
+                    { name: 'Defesa Civil (Disque 199)', info: 'Para vistorias emergenciais em casos de risco estrutural no imóvel.' }
+                ]
+            },
+            'violacao-alimentacao': {
+                category: 'Onde Procurar Ajuda?',
+                title: 'Direitos Violados na Alimentação',
+                type: 'violation',
+                section1_direito: 'Comercialização de alimentos estragados/vencidos ou violação de programas de merenda escolar.',
+                section2_identificar: 'Produtos sem lote ou data de validade em prateleiras e estabelecimentos com condições péssimas de higiene.',
+                section3_fazer: 'Não consuma o alimento, tire fotos do produto, guarde a nota fiscal ou comprovante de compra.',
+                section4_ajuda: 'Notifique a Vigilância Sanitária local e os órgãos de defesa do consumidor.',
+                organs: [
+                    { name: 'Vigilância Sanitária Municipal (VISA)', info: 'Fiscalização imediata das condições higiênico-sanitárias.' },
+                    { name: 'Procon Municipal / Estadual', info: 'Aplicação de sanções administrativas aos estabelecimentos infratores.' }
+                ]
+            },
+            'violacao-educacao': {
+                category: 'Onde Procurar Ajuda?',
+                title: 'Direitos Violados na Educação',
+                type: 'violation',
+                section1_direito: 'Negação de vaga na rede pública de ensino próximo à residência da criança.',
+                section2_identificar: 'Quando a família é impossibilitada de matricular o filho por alegada falta de turmas.',
+                section3_fazer: 'Solicite uma declaração escrita da escola justificando formalmente a recusa da vaga.',
+                section4_ajuda: 'Procure o Conselho Tutelar com os documentos da criança.',
+                organs: [
+                    { name: 'Conselho Tutelar', info: 'Garante o cumprimento imediato do direito à matrícula escolar.' },
+                    { name: 'Promotoria da Infância e Juventude', info: 'Acionada caso o município não garanta vagas suficientes na rede.' }
+                ]
+            }
+        };
+
+        // PÁGINAS "QUEM SOMOS"
+        const aboutPages = {
+            'sobre': {
+                title: 'Sobre o Projeto Direitos DeVerdade',
+                badge: 'Quem Somos',
+                html: `
+                    <div class="about-card">
+                        <h2>O que é o projeto?</h2>
+                        <p>O <strong>Direitos DeVerdade</strong> é uma iniciativa educacional e cidadã que busca simplificar o entendimento das leis, garantias constitucionais e serviços públicos no Brasil.</p>
+                        <h3>Qual problema pretendemos resolver?</h3>
+                        <p>Grande parte da população brasileira desconhece seus direitos e os canais corretos para requeri-los devido ao uso de uma linguagem jurídica excessivamente complexa e ao acesso pulverizado à informação.</p>
+                        <h3>Por que a informação acessível é vital?</h3>
+                        <p>Apenas com cidadãos conscientizados sobre suas prerrogativas legais e obrigações é possível fortalecer a democracia, combater abusos e exigir a correta aplicação dos recursos públicos.</p>
+                    </div>
+                `
+            },
+            'missao': {
+                title: 'Nossa Missão',
+                badge: 'Propósito',
+                html: `
+                    <div class="about-card">
+                        <div class="mission-box">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <h2>Tornar informações sobre direitos, deveres, leis e serviços públicos mais acessíveis, compreensíveis e fáceis de encontrar para toda a população brasileira.</h2>
+                        </div>
+                    </div>
+                `
+            },
+            'equipe': {
+                title: 'Equipe de Desenvolvimento',
+                badge: 'Integrantes',
+                html: `
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                            <h3>Ana Silva</h3>
+                            <span class="role">Coordenadora do Projeto</span>
+                            <p>Especialista em Direito Constitucional e Políticas Públicas.</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                            <h3>Bruno Souza</h3>
+                            <span class="role">Designer de Interface (UX/UI)</span>
+                            <p>Focado em Acessibilidade Digital e Design Social.</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                            <h3>Carla Mendes</h3>
+                            <span class="role">Desenvolvedora Front-End</span>
+                            <p>Engenheira de Software e entusiasta de dados abertos.</p>
+                        </div>
+                    </div>
+                `
+            },
+            'instituicao': {
+                title: 'Instituição de Ensino e Apoio',
+                badge: 'Parcerias',
+                html: `
+                    <div class="about-card text-center">
+                        <div class="inst-logo-placeholder">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h2>Projeto Acadêmico e Interdisciplinar</h2>
+                        <p><strong>Instituição:</strong> Universidade Aberta do Brasil / Faculdade de Direito e Tecnologia</p>
+                        <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas & Direito Digital</p>
+                        <p>Projeto de extensão acadêmica focado na promoção do acesso à justiça e transparência da informação pública.</p>
+                    </div>
+                `
+            },
+            'fontes': {
+                title: 'Fontes e Referências',
+                badge: 'Fundamentação',
+                html: `
+                    <div class="about-card">
+                        <ul class="sources-list">
+                            <li><i class="fa-solid fa-check"></i> <strong>Constituição da República Federativa do Brasil (1988)</strong> - Planalto Central</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong></li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Consolidação das Leis do Trabalho (CLT)</strong></li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Portal da Transparência do Governo Federal</strong></li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Defensoria Pública da União e Conselho Nacional de Justiça (CNJ)</strong></li>
+                        </ul>
+                    </div>
+                `
+            },
+            'contato': {
+                title: 'Fale Conosco',
+                badge: 'Contato',
+                html: `
+                    <div class="about-card">
+                        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="c-name">Seu Nome:</label>
+                                <input type="text" id="c-name" required placeholder="Digite seu nome completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="c-email">Seu E-mail:</label>
+                                <input type="email" id="c-email" required placeholder="seuemail@exemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="c-msg">Sua Mensagem:</label>
+                                <textarea id="c-msg" rows="4" required placeholder="Escreva sua dúvida ou mensagem..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                `
+            },
+            'aviso': {
+                title: 'Aviso Importante',
+                badge: 'Termos e Isenção',
+                html: `
+                    <div class="about-card aviso-box-large">
+                        <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+                        <h2>Aviso Legal e Educacional</h2>
+                        <p>O site <strong>Direitos DeVerdade</strong> é um portal exclusivamente informativo, educativo e pedagógico.</p>
+                        <p>As informações aqui disponibilizadas <strong>NÃO substituem uma consulta jurídica formal</strong> com advogados inscritos na OAB ou defensores públicos.</p>
+                        <p>Em caso de violação real de direitos ou urgência processual, busque atendimento presencial em um órgão competente.</p>
+                    </div>
+                `
+            }
+        };
+
+        // BASE DE DADOS DO QUIZ
+        const quizQuestions = {
+            'leis': [
+                {
+                    q: 'Qual é considerada a Lei Suprema do Brasil?',
+                    options: [
+                        'O Código Civil',
+                        'A Constituição Federal de 1988',
+                        'O Código Penal',
+                        'A Consolidação das Leis do Trabalho'
+                    ],
+                    correct: 1,
+                    explanation: 'A Constituição Federal de 1988 é a norma fundamental do Brasil. Nenhuma outra lei pode contrariá-la.'
+                },
+                {
+                    q: 'No Código de Defesa do Consumidor, qual o prazo do "Direito de Arrependimento" para compras online?',
+                    options: [
+                        '3 dias',
+                        '7 dias',
+                        '15 dias',
+                        '30 dias'
+                    ],
+                    correct: 1,
+                    explanation: 'O artigo 49 do CDC garante o prazo de 7 dias após o recebimento para desistir de compras feitas fora da loja física.'
+                },
+                {
+                    q: 'Qual é o principal objetivo da Lei Maria da Penha?',
+                    options: [
+                        'Coibir e prevenir a violência doméstica e familiar contra a mulher',
+                        'Regular a aposentadoria das mulheres',
+                        'Definir a jornada de trabalho feminina',
+                        'Fiscalizar impostos de produtos femininos'
+                    ],
+                    correct: 0,
+                    explanation: 'A Lei nº 11.340/2006 estabelece medidas de proteção e prevenção contra agressões físicas, psicológicas e morais sofridas por mulheres.'
+                }
+            ],
+            'direitos': [
+                {
+                    q: 'Qual é a jornada regular máxima de trabalho semanal garantida na Constituição brasileira?',
+                    options: [
+                        '36 horas',
+                        '40 horas',
+                        '44 horas',
+                        '48 horas'
+                    ],
+                    correct: 2,
+                    explanation: 'A Constituição de 1988 limita a jornada normal de trabalho a até 44 horas semanais.'
+                },
+                {
+                    q: 'A partir de qual idade a gratuidade nos transportes públicos urbanos é garantida por lei federal aos idosos?',
+                    options: [
+                        '55 anos',
+                        '60 anos',
+                        '65 anos',
+                        '70 anos'
+                    ],
+                    correct: 2,
+                    explanation: 'Conforme o Estatuto do Idoso, a gratuidade do transporte urbano é assegurada aos maiores de 65 anos.'
+                },
+                {
+                    q: 'Qual dos itens abaixo representa um DEVER fundamental do cidadão?',
+                    options: [
+                        'Votar nas eleições',
+                        'Ter plano de saúde privado',
+                        'Possuir carteira de motorista',
+                        'Comprar imóvel próprio'
+                    ],
+                    correct: 0,
+                    explanation: 'O voto é um dever do cidadão (obrigatório entre 18 e 70 anos no Brasil).'
+                }
+            ],
+            'agentes': [
+                {
+                    q: 'Quem é o chefe do Poder Executivo em um município?',
+                    options: [
+                        'O Deputado Estadual',
+                        'O Vereador',
+                        'O Prefeito',
+                        'O Governador'
+                    ],
+                    correct: 2,
+                    explanation: 'O Prefeito administra o município e executa o orçamento e serviços públicos da cidade.'
+                },
+                {
+                    q: 'Qual é a função primordial de um Vereador?',
+                    options: [
+                        'Asfaltar ruas e recolher o lixo diretamente',
+                        'Votar leis municipais e fiscalizar as ações do Prefeito',
+                        'Julgar processos criminais locais',
+                        'Comandar a Polícia Militar'
+                    ],
+                    correct: 1,
+                    explanation: 'Vereadores pertencem ao Poder Legislativo Municipal: legislam e fiscalizam o Poder Executivo da cidade.'
+                },
+                {
+                    q: 'Quantos Senadores cada Estado brasileiro elege para representá-lo em Brasília?',
+                    options: [
+                        '2 Senadores',
+                        '3 Senadores',
+                        '5 Senadores',
+                        'Varia conforme a população'
+                    ],
+                    correct: 1,
+                    explanation: 'A representação no Senado Federal é igualitária: cada um dos 26 Estados e o DF possuem exatamente 3 Senadores.'
+                }
+            ]
+        };
+
+        // ESTADO DO APLICATIVO
+        let currentQuizCategory = '';
+        let currentQuestionIndex = 0;
+        let userScore = 0;
+        let selectedOption = null;
+
+        // NAVEGAÇÃO DE TElAS COM SIMULAÇÃO DE CARREGAMENTO
+        function navigateTo(pageId) {
+            showLoading();
+            setTimeout(() => {
+                document.querySelectorAll('.page-view').forEach(view => view.classList.remove('active'));
+                const targetView = document.getElementById('page-' + pageId);
+                if (targetView) targetView.classList.add('active');
+                window.scrollTo(0, 0);
+                hideLoading();
+            }, 250);
+        }
+
+        function showLoading() {
+            document.getElementById('loading-overlay').classList.remove('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('loading-overlay').classList.add('hidden');
+        }
+
+        // ABRIR PÁGINAS DE CONTEÚDO (MINICARDS)
+        function openContent(contentKey) {
+            const data = contentDatabase[contentKey];
+            if (!data) return;
+
+            showLoading();
+            setTimeout(() => {
+                document.getElementById('detail-category').innerText = data.category;
+                document.getElementById('detail-title').innerText = data.title;
+                
+                const bodyContainer = document.getElementById('detail-body');
+                bodyContainer.innerHTML = '';
+
+                if (data.type === 'standard') {
+                    let html = `<div class="content-card summary-card"><p><strong>Resumo:</strong> ${data.summary}</p></div>`;
+                    data.sections.forEach(sec => {
+                        html += `
+                            <div class="content-card">
+                                <h3>${sec.heading}</h3>
+                                <p>${sec.text}</p>
+                            </div>
+                        `;
+                    });
+                    bodyContainer.innerHTML = html;
+                } else if (data.type === 'violation') {
+                    let html = `
+                        <div class="violation-step-box">
+                            <div class="v-step"><span class="step-num">1</span> <h4>Qual direito pode estar sendo violado?</h4><p>${data.section1_direito}</p></div>
+                            <div class="v-step"><span class="step-num">2</span> <h4>Como identificar a situação?</h4><p>${data.section2_identificar}</p></div>
+                            <div class="v-step"><span class="step-num">3</span> <h4>O que posso fazer?</h4><p>${data.section3_fazer}</p></div>
+                        </div>
+
+                        <div class="help-highlight-box">
+                            <i class="fa-solid fa-hand-holding-hand"></i>
+                            <div>
+                                <h3>4. Onde Procurar Ajuda Imeta?</h3>
+                                <p>${data.section4_ajuda}</p>
+                            </div>
+                        </div>
+
+                        <h3 class="organs-title">5. Quais órgãos procurar?</h3>
+                        <div class="organs-grid">
+                    `;
+                    data.organs.forEach(org => {
+                        html += `
+                            <div class="organ-card">
+                                <h4><i class="fa-solid fa-building"></i> ${org.name}</h4>
+                                <p>${org.info}</p>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                    bodyContainer.innerHTML = html;
+                }
+
+                document.querySelectorAll('.page-view').forEach(view => view.classList.remove('active'));
+                document.getElementById('page-content').classList.add('active');
+                window.scrollTo(0, 0);
+                hideLoading();
+            }, 250);
+        }
+
+        // ABRIR PÁGINAS "QUEM SOMOS"
+        function navigateToAbout(aboutKey) {
+            const data = aboutPages[aboutKey];
+            if (!data) return;
+
+            showLoading();
+            setTimeout(() => {
+                document.getElementById('detail-category').innerText = data.badge;
+                document.getElementById('detail-title').innerText = data.title;
+                document.getElementById('detail-body').innerHTML = data.html;
+
+                document.querySelectorAll('.page-view').forEach(view => view.classList.remove('active'));
+                document.getElementById('page-content').classList.add('active');
+                window.scrollTo(0, 0);
+                hideLoading();
+            }, 250);
+        }
+
+        // CONTATO FORM HANDLER
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Sua mensagem foi enviada com sucesso! Agradecemos o contato.');
+            e.target.reset();
+        }
+
+        // LÓGICA DO QUIZ
+        function startQuiz(categoryKey) {
+            currentQuizCategory = categoryKey;
+            currentQuestionIndex = 0;
+            userScore = 0;
+            
+            const catNames = {
+                'leis': 'Quiz de Leis',
+                'direitos': 'Quiz de Direitos e Deveres',
+                'agentes': 'Quiz de Agentes Públicos'
+            };
+            document.getElementById('quiz-cat-title').innerText = catNames[categoryKey] || 'Quiz';
+            
+            loadQuizQuestion();
+            navigateTo('quiz-play');
+        }
+
+        function retryCurrentQuiz() {
+            startQuiz(currentQuizCategory);
+        }
+
+        function loadQuizQuestion() {
+            selectedOption = null;
+            const qList = quizQuestions[currentQuizCategory];
+            const q = qList[currentQuestionIndex];
+            
+            // Atualiza progresso
+            const total = qList.length;
+            const progressPercent = ((currentQuestionIndex + 1) / total) * 100;
+            document.getElementById('quiz-progress-fill').style.width = progressPercent + '%';
+            document.getElementById('quiz-step-text').innerText = `Pergunta ${currentQuestionIndex + 1} de ${total}`;
+            
+            // Pergunta
+            document.getElementById('quiz-question-text').innerText = q.q;
+
+            // Opções
+            const optsContainer = document.getElementById('quiz-options');
+            optsContainer.innerHTML = '';
+
+            q.options.forEach((optText, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-opt-btn';
+                btn.innerHTML = `<span class="opt-letter">${String.fromCharCode(65 + index)}</span> <span class="opt-text">${optText}</span>`;
+                btn.onclick = () => selectQuizOption(index);
+                optsContainer.appendChild(btn);
+            });
+
+            // Oculta feedback e botão próxima
+            document.getElementById('quiz-feedback-box').className = 'quiz-feedback hidden';
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+        }
+
+        function selectQuizOption(optIndex) {
+            if (selectedOption !== null) return; // Já respondeu
+            selectedOption = optIndex;
+
+            const qList = quizQuestions[currentQuizCategory];
+            const q = qList[currentQuestionIndex];
+            const isCorrect = (optIndex === q.correct);
+
+            if (isCorrect) userScore++;
+
+            const optButtons = document.querySelectorAll('.quiz-opt-btn');
+            optButtons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correct) {
+                    btn.classList.add('correct');
+                } else if (idx === optIndex && !isCorrect) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            // Mostrar Feedback
+            const fbBox = document.getElementById('quiz-feedback-box');
+            fbBox.classList.remove('hidden');
+            if (isCorrect) {
+                fbBox.className = 'quiz-feedback correct-fb';
+                fbBox.innerHTML = `<strong><i class="fa-solid fa-circle-check"></i> Correto!</strong><p>${q.explanation}</p>`;
+            } else {
+                fbBox.className = 'quiz-feedback incorrect-fb';
+                fbBox.innerHTML = `<strong><i class="fa-solid fa-circle-xmark"></i> Incorreto!</strong><p>${q.explanation}</p>`;
+            }
+
+            // Exibir botão próxima pergunta ou ver resultado
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.classList.remove('hidden');
+            if (currentQuestionIndex === qList.length - 1) {
+                nextBtn.innerHTML = 'Ver Resultado <i class="fa-solid fa-trophy"></i>';
+            } else {
+                nextBtn.innerHTML = 'Próxima Pergunta <i class="fa-solid fa-arrow-right"></i>';
+            }
+        }
+
+        function nextQuestion() {
+            const qList = quizQuestions[currentQuizCategory];
+            if (currentQuestionIndex < qList.length - 1) {
+                currentQuestionIndex++;
+                loadQuizQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            const total = quizQuestions[currentQuizCategory].length;
+            document.getElementById('result-score-num').innerText = userScore;
+            document.getElementById('result-total-num').innerText = total;
+
+            const msgElem = document.getElementById('result-message');
+            const iconElem = document.getElementById('result-icon');
+
+            if (userScore === total) {
+                iconElem.innerHTML = '<i class="fa-solid fa-trophy" style="color: #D69E2E;"></i>';
+                msgElem.innerText = 'Parabéns! Excelente conhecimento sobre a legislação e direitos cidadãos!';
+            } else if (userScore >= 1) {
+                iconElem.innerHTML = '<i class="fa-solid fa-star" style="color: #319795;"></i>';
+                msgElem.innerText = 'Muito bem! Você tem uma boa noção. Revise os conteúdos e tente acertar todas!';
+            } else {
+                iconElem.innerHTML = '<i class="fa-solid fa-book-open" style="color: #E53E3E;"></i>';
+                msgElem.innerText = 'Que tal explorar nossos cards informativos e tentar o quiz novamente?';
+            }
+
+            navigateTo('quiz-result');
+        }
+    </script>
+</body>
+</html>
 
