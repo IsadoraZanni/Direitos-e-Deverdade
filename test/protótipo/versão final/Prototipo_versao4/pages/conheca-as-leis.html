@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Conheça as Leis — educação cidadã para jovens, com navegação livre, exemplos e interações." name="description"/>
+        <meta content="#0a0d0b" name="theme-color"/>
+        <title>
+            Conheça as Leis | Direitos e Deverdade
+        </title>
+        <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+        <link href="../css/style.css" rel="stylesheet"/>
+        <link href="../css/quiz.css" rel="stylesheet"/>
+        <!-- Scripts clássicos com defer: funcionam abrindo o HTML pelo navegador. -->
+        <script defer="" src="../js/main.js">
+        </script>
+        <script defer="" src="../js/explorador.js">
+        </script>
+        <script defer="" src="../js/perguntas.js">
+        </script>
+        <script defer="" src="../js/quiz.js">
+        </script>
+    </head>
+    <body class="">
+        <a class="pular-conteudo" href="#conteudo">
+            Pular para o conteúdo
+        </a>
+        <!-- Cabeçalho comum: links HTML normais, sem roteador ou JavaScript. -->
+        <header class="cabecalho">
+            <div class="container cabecalho__interior">
+                <a aria-label="Direitos e Deverdade — início" class="marca" href="../index.html">
+                    Direitos
+                    <span>
+                        &amp;
+                    </span>
+                    Deverdade.
+                </a>
+                <button aria-controls="navegacao-principal" aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" type="button">
+                    <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+                <nav aria-label="Navegação principal" class="navegacao" id="navegacao-principal">
+                    <a href="../index.html">
+                        Início
+                    </a>
+                    <a href="../pages/direitos-e-deveres.html">
+                        Direitos e Deveres
+                    </a>
+                    <a aria-current="page" href="../pages/conheca-as-leis.html">
+                        Conheça as Leis
+                    </a>
+                    <a href="../pages/quem-faz-as-leis.html">
+                        Quem faz as leis?
+                    </a>
+                    <a href="../pages/como-usar-seus-direitos.html">
+                        Como usar seus direitos
+                    </a>
+                    <a class="atalho-quiz" href="../pages/quiz.html">
+                        Quiz
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <noscript>
+            <p class="noscript-aviso">
+                Os conteúdos e links continuam disponíveis. Ative o JavaScript do navegador para usar os quizzes e os painéis interativos.
+            </p>
+        </noscript>
+        <main id="conteudo" tabindex="-1">
+            <section class="hero-pagina">
+                <div class="container">
+                    <nav aria-label="Localização" class="migalhas">
+                        <a href="../index.html">
+                            Início
+                        </a>
+                        <span aria-hidden="true">
+                            /
+                        </span>
+                        <span>
+                            Conheça as Leis
+                        </span>
+                    </nav>
+                    <div>
+                        <p class="rotulo">
+                            02 / Conheça as Leis
+                        </p>
+                        <h1>
+                            As leis estão em
+                            <span class="destaque">
+                                todas as partes
+                            </span>
+                            da vida em sociedade.
+                        </h1>
+                        <p class="descricao">
+                            Elas organizam relações, estabelecem regras e criam mecanismos para proteger direitos e orientar a convivência.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="secao secao--linha">
+                <div class="container">
+                    <div class="cabecalho-secao">
+                        <p class="rotulo">
+                            01 / Por que existem?
+                        </p>
+                        <h2>
+                            Regras para uma sociedade complexa.
+                        </h2>
+                    </div>
+                    <div class="grade-3">
+                        <article class="cartao">
+                            <p class="rotulo">
+                                01
+                            </p>
+                            <h3>
+                                Organizar
+                            </h3>
+                            <p>
+                                Leis estabelecem regras para relações entre pessoas, instituições e poder público.
+                            </p>
+                        </article>
+                        <article class="cartao">
+                            <p class="rotulo">
+                                02
+                            </p>
+                            <h3>
+                                Proteger
+                            </h3>
+                            <p>
+                                Também podem criar garantias e mecanismos de proteção de direitos.
+                            </p>
+                        </article>
+                        <article class="cartao">
+                            <p class="rotulo">
+                                03
+                            </p>
+                            <h3>
+                                Responsabilizar
+                            </h3>
+                            <p>
+                                Quando uma norma é violada, ela pode prever consequências e formas de responsabilização.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="secao" id="areas">
+                <div class="container">
+                    <div class="cabecalho-secao">
+                        <p class="rotulo">
+                            02 / Explore
+                        </p>
+                        <h2>
+                            Escolha uma área.
+                        </h2>
+                        <p>
+                            Clique no tema para consultar a explicação e os exemplos.
+                        </p>
+                    </div>
+                    <div class="explorador" data-explorador="">
+                        <div class="explorador__botoes" hidden="">
+                            <button aria-controls="area-0" aria-pressed="true" class="seletor" data-area="area-0" type="button">
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M12 21 3 12C-2 6 6 1 12 7c6-6 14-1 9 5l-9 9Z">
+                                    </path>
+                                    <path d="M5 12h4l2-4 2 8 2-4h4">
+                                    </path>
+                                </svg>
+                                <span>
+                                    Saúde
+                                </span>
+                                <svg aria-hidden="true" class="icone seta" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button aria-controls="area-1" aria-pressed="false" class="seletor" data-area="area-1" type="button">
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="m2 8 10-5 10 5-10 5L2 8Zm4 3v6c4 3 8 3 12 0v-6m4-3v8">
+                                    </path>
+                                </svg>
+                                <span>
+                                    Educação
+                                </span>
+                                <svg aria-hidden="true" class="icone seta" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button aria-controls="area-2" aria-pressed="false" class="seletor" data-area="area-2" type="button">
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M20 3C9 2 2 6 4 15c2 7 15 8 16-12ZM4 21 17 7">
+                                    </path>
+                                </svg>
+                                <span>
+                                    Ambiental
+                                </span>
+                                <svg aria-hidden="true" class="icone seta" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button aria-controls="area-3" aria-pressed="false" class="seletor" data-area="area-3" type="button">
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M5 8h14l2 13H3L5 8Zm3 0V6a4 4 0 0 1 8 0v2">
+                                    </path>
+                                </svg>
+                                <span>
+                                    Consumidor
+                                </span>
+                                <svg aria-hidden="true" class="icone seta" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button aria-controls="area-4" aria-pressed="false" class="seletor" data-area="area-4" type="button">
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Z">
+                                    </path>
+                                    <path d="M12 6v14">
+                                    </path>
+                                </svg>
+                                <span>
+                                    Trabalhista
+                                </span>
+                                <svg aria-hidden="true" class="icone seta" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button aria-controls="area-5" aria-pressed="false" class="seletor" data-area="area-5" type="button">
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="m14 3 7 7-4 4-7-7 4-4ZM3 21l10-10m-4 7H3v3h11">
+                                    </path>
+                                </svg>
+                                <span>
+                                    Criminal
+                                </span>
+                                <svg aria-hidden="true" class="icone seta" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div>
+                            <article class="explorador__painel" data-painel-area="" id="area-0">
+                                <p class="rotulo">
+                                    Área 01
+                                </p>
+                                <h3>
+                                    Saúde
+                                </h3>
+                                <p>
+                                    Normas relacionadas à proteção da saúde e à organização de serviços e responsabilidades nessa área.
+                                </p>
+                                <ul class="exemplos-lista">
+                                    <li>
+                                        atendimento e políticas de saúde
+                                    </li>
+                                    <li>
+                                        vigilância sanitária
+                                    </li>
+                                    <li>
+                                        proteção da saúde coletiva
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="explorador__painel" data-painel-area="" id="area-1">
+                                <p class="rotulo">
+                                    Área 02
+                                </p>
+                                <h3>
+                                    Educação
+                                </h3>
+                                <p>
+                                    Regras que organizam direitos, deveres e políticas relacionadas à educação.
+                                </p>
+                                <ul class="exemplos-lista">
+                                    <li>
+                                        acesso e permanência na escola
+                                    </li>
+                                    <li>
+                                        organização da educação
+                                    </li>
+                                    <li>
+                                        diretrizes educacionais
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="explorador__painel" data-painel-area="" id="area-2">
+                                <p class="rotulo">
+                                    Área 03
+                                </p>
+                                <h3>
+                                    Ambiental
+                                </h3>
+                                <p>
+                                    Normas voltadas à proteção do meio ambiente e ao uso responsável dos recursos naturais.
+                                </p>
+                                <ul class="exemplos-lista">
+                                    <li>
+                                        preservação ambiental
+                                    </li>
+                                    <li>
+                                        poluição e impactos
+                                    </li>
+                                    <li>
+                                        proteção de recursos naturais
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="explorador__painel" data-painel-area="" id="area-3">
+                                <p class="rotulo">
+                                    Área 04
+                                </p>
+                                <h3>
+                                    Consumidor
+                                </h3>
+                                <p>
+                                    Regras que protegem consumidores e organizam relações de consumo.
+                                </p>
+                                <ul class="exemplos-lista">
+                                    <li>
+                                        informação sobre produtos
+                                    </li>
+                                    <li>
+                                        relações de compra
+                                    </li>
+                                    <li>
+                                        responsabilidade por serviços
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="explorador__painel" data-painel-area="" id="area-4">
+                                <p class="rotulo">
+                                    Área 05
+                                </p>
+                                <h3>
+                                    Trabalhista
+                                </h3>
+                                <p>
+                                    Normas que disciplinam relações de trabalho e direitos e deveres de trabalhadores e empregadores.
+                                </p>
+                                <ul class="exemplos-lista">
+                                    <li>
+                                        jornada e descanso
+                                    </li>
+                                    <li>
+                                        contratos e relações de trabalho
+                                    </li>
+                                    <li>
+                                        direitos trabalhistas
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="explorador__painel" data-painel-area="" id="area-5">
+                                <p class="rotulo">
+                                    Área 06
+                                </p>
+                                <h3>
+                                    Criminal
+                                </h3>
+                                <p>
+                                    Normas que definem crimes, consequências jurídicas e regras relacionadas à responsabilização penal.
+                                </p>
+                                <ul class="exemplos-lista">
+                                    <li>
+                                        crimes e penas
+                                    </li>
+                                    <li>
+                                        responsabilidade penal
+                                    </li>
+                                    <li>
+                                        proteção de bens jurídicos
+                                    </li>
+                                </ul>
+                            </article>
+                        </div>
+                        <p aria-live="polite" class="sr-only" data-anuncio-area="">
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="secao secao--sutil" id="praticar">
+                <div class="quiz-container">
+                    <div class="cabecalho-secao">
+                        <p class="rotulo">
+                            03 / Agora é com você
+                        </p>
+                        <h2>
+                            Qual área aparece aqui?
+                        </h2>
+                        <p>
+                            Use o contexto para identificar o campo jurídico mais relacionado. Uma situação real pode envolver mais de uma área.
+                        </p>
+                    </div>
+                    <!-- O quiz usa JavaScript puro para atualizar estes elementos. -->
+                    <div class="quiz-cartao" data-quiz="leis" hidden="">
+                        <div data-questao-painel="">
+                            <div class="quiz-meta">
+                                <p data-contador="">
+                                </p>
+                                <p data-respondidas="">
+                                </p>
+                            </div>
+                            <progress aria-label="Perguntas respondidas" class="quiz-progresso" max="1" value="0">
+                            </progress>
+                            <h3 class="quiz-pergunta" data-enunciado="" id="enunciado-quiz" tabindex="-1">
+                            </h3>
+                            <div aria-labelledby="enunciado-quiz" class="quiz-alternativas" data-alternativas="" role="group">
+                            </div>
+                            <div class="quiz-feedback" data-feedback="" hidden="">
+                                <p class="quiz-feedback__titulo" data-feedback-titulo="" tabindex="-1">
+                                </p>
+                                <p class="quiz-feedback__texto" data-explicacao="">
+                                </p>
+                                <button class="botao" data-proxima="" type="button">
+                                    Próxima situação →
+                                </button>
+                            </div>
+                        </div>
+                        <section aria-labelledby="titulo-resultado" class="quiz-resultado" data-resultado="" hidden="">
+                            <p class="rotulo">
+                                Você completou as situações
+                            </p>
+                            <h3 data-resultado-titulo="" id="titulo-resultado" tabindex="-1">
+                                Aprender também é revisar.
+                            </h3>
+                            <p class="quiz-pontos" data-pontos="">
+                            </p>
+                            <p>
+                                O resultado mostra as respostas desta tentativa. Abra cada pergunta abaixo para revisar a explicação.
+                            </p>
+                            <div class="botoes">
+                                <button class="botao" data-reiniciar="" type="button">
+                                    Refazer as perguntas
+                                </button>
+                                <a class="botao botao--secundario" href="../index.html#explorar">
+                                    Explorar outro tema
+                                </a>
+                            </div>
+                            <div class="quiz-revisao" data-revisao="">
+                            </div>
+                        </section>
+                    </div>
+                    <noscript>
+                        <p class="callout">
+                            Ative o JavaScript do navegador para responder a este exercício. Os textos das páginas continuam disponíveis.
+                        </p>
+                    </noscript>
+                    <p class="quiz-aviso">
+                        Sem cronômetro ou conteúdo bloqueado. As respostas ficam apenas nesta página e são reiniciadas ao recarregá-la.
+                    </p>
+                </div>
+            </section>
+            <section class="secao">
+                <div class="container">
+                    <div class="cabecalho-secao">
+                        <p class="rotulo">
+                            04 / Curiosidade
+                        </p>
+                        <h2>
+                            Nem toda norma é uma “lei” no mesmo sentido.
+                        </h2>
+                        <p>
+                            O ordenamento jurídico brasileiro possui diferentes tipos de normas e atos. Por isso, quando uma situação concreta surgir, é importante descobrir qual regra realmente se aplica ao caso.
+                        </p>
+                    </div>
+                    <div class="acordeao-lista" data-acordeao="livre">
+                        <article class="acordeao-item">
+                            <h3>
+                                <button aria-controls="curiosidades-resposta-0" aria-expanded="true" data-inicial-aberto="false" class="acordeao-botao" id="curiosidades-botao-0" type="button">
+                                    <span class="numero">
+                                        01
+                                    </span>
+                                    <span>
+                                        Uma situação pode envolver mais de uma área do Direito.
+                                    </span>
+                                    <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                        <path d="m5 9 7 7 7-7">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </h3>
+                            <div aria-labelledby="curiosidades-botao-0" class="acordeao-painel" id="curiosidades-resposta-0">
+                                <p>
+                                    Esse ponto é importante porque uma mesma realidade pode ser analisada por diferentes normas. O objetivo aqui é aprender a fazer perguntas melhores sobre o problema.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="acordeao-item">
+                            <h3>
+                                <button aria-controls="curiosidades-resposta-1" aria-expanded="true" data-inicial-aberto="false" class="acordeao-botao" id="curiosidades-botao-1" type="button">
+                                    <span class="numero">
+                                        02
+                                    </span>
+                                    <span>
+                                        A regra aplicável depende do caso concreto e do tipo de norma envolvida.
+                                    </span>
+                                    <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                        <path d="m5 9 7 7 7-7">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </h3>
+                            <div aria-labelledby="curiosidades-botao-1" class="acordeao-painel" id="curiosidades-resposta-1">
+                                <p>
+                                    Esse ponto é importante porque uma mesma realidade pode ser analisada por diferentes normas. O objetivo aqui é aprender a fazer perguntas melhores sobre o problema.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="acordeao-item">
+                            <h3>
+                                <button aria-controls="curiosidades-resposta-2" aria-expanded="true" data-inicial-aberto="false" class="acordeao-botao" id="curiosidades-botao-2" type="button">
+                                    <span class="numero">
+                                        03
+                                    </span>
+                                    <span>
+                                        Informação ajuda, mas casos concretos podem exigir orientação profissional.
+                                    </span>
+                                    <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                        <path d="m5 9 7 7 7-7">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </h3>
+                            <div aria-labelledby="curiosidades-botao-2" class="acordeao-painel" id="curiosidades-resposta-2">
+                                <p>
+                                    Esse ponto é importante porque uma mesma realidade pode ser analisada por diferentes normas. O objetivo aqui é aprender a fazer perguntas melhores sobre o problema.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="secao">
+                <div class="container">
+                    <div class="fechamento">
+                        <p class="rotulo">
+                            Continue explorando
+                        </p>
+                        <h2>
+                            Agora que você conhece as áreas, descubra
+                            <span class="destaque">
+                                quem participa
+                            </span>
+                            da criação e aplicação das leis.
+                        </h2>
+                        <div class="botoes">
+                            <a class="botao" href="quem-faz-as-leis.html">
+                                Quem faz as leis?
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="botao botao--secundario" href="../index.html#explorar">
+                                Explorar os temas
+                                <svg aria-hidden="true" class="icone" focusable="false" viewbox="0 0 24 24">
+                                    <path d="M3 12h18m-7-7 7 7-7 7">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class="fontes">
+                <div class="container">
+                    <details>
+                        <summary>
+                            Fontes e contexto de leitura
+                        </summary>
+                        <p>
+                            Textos adaptados do conteúdo do protótipo. Referências oficiais para consulta; links externos precisam de Internet. Conferência dos canais e referências: 26/09/2026.
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" rel="noopener noreferrer" target="_blank">
+                                    Constituição Federal — direitos fundamentais e organização dos poderes ↗
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.camara.leg.br/entenda-o-processo-legislativo/" rel="noopener noreferrer" target="_blank">
+                                    Câmara dos Deputados — entenda o processo legislativo ↗
+                                </a>
+                            </li>
+                        </ul>
+                        <p>
+                            As seis áreas foram mantidas do protótipo. São categorias para aprendizagem, não uma lista exaustiva de normas.
+                        </p>
+                    </details>
+                </div>
+            </aside>
+        </main>
+        <footer class="rodape">
+            <div class="container">
+                <div class="rodape__grade">
+                    <div>
+                        <a class="marca" href="../index.html">
+                            Direitos
+                            <span>
+                                &amp;
+                            </span>
+                            Deverdade.
+                        </a>
+                        <p class="rodape__missao">
+                            Conhecimento para entender.
+                            <br/>
+                            Espaço para participar.
+                        </p>
+                        <p class="rodape__descricao">
+                            Um projeto acadêmico de desenvolvimento web com proposta de educação cidadã para o terceiro setor.
+                        </p>
+                    </div>
+                    <nav aria-label="Temas no rodapé">
+                        <h2>
+                            Explore
+                        </h2>
+                        <a href="../pages/direitos-e-deveres.html">
+                            Direitos e Deveres
+                        </a>
+                        <a href="../pages/conheca-as-leis.html">
+                            Conheça as Leis
+                        </a>
+                        <a href="../pages/quem-faz-as-leis.html">
+                            Quem faz as leis?
+                        </a>
+                        <a href="../pages/como-usar-seus-direitos.html">
+                            Como usar seus direitos
+                        </a>
+                        <a href="../pages/quiz.html">
+                            Quiz
+                        </a>
+                    </nav>
+                    <div class="rodape__projeto">
+                        <h2>
+                            O projeto
+                        </h2>
+                        <a href="../index.html#sobre">
+                            Quem somos
+                        </a>
+                        <a href="../index.html#duvidas">
+                            Como funciona
+                        </a>
+                        <p>
+                            Contato e redes sociais
+                            <br/>
+                            Em preparação pela equipe.
+                        </p>
+                    </div>
+                </div>
+                <div class="rodape__base">
+                    <p>
+                        Direitos e Deverdade · Projeto acadêmico
+                    </p>
+                    <p>
+                        Conteúdo educativo. Não substitui orientação jurídica individual.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

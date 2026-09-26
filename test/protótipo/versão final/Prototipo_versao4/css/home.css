@@ -1,0 +1,409 @@
+/* HOME: apenas a apresentação e os cinco cards da página inicial.
+   Os estilos comuns continuam em style.css. */
+.home-hero {
+    padding: 70px 0 64px;
+}
+
+.home-hero__grade {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 66px;
+    align-items: center;
+}
+
+.home-hero h1 {
+    font-size: clamp(46px, 5.6vw, 78px);
+    margin: 24px 0;
+    line-height: 1.01;
+    letter-spacing: -0.04em;
+}
+
+.home-hero h1 .ultima-linha {
+    display: block;
+    margin-top: 5px;
+}
+
+.home-hero .descricao {
+    max-width: 550px;
+    font-size: 17px;
+}
+
+.home-hero__nota {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+.home-hero__nota .icone {
+    width: 16px;
+    height: 16px;
+    color: var(--verde);
+}
+
+.home-visual {
+    border-top: 1px solid var(--borda-ativa);
+    padding-top: 20px;
+    position: relative;
+}
+
+.home-visual__titulo {
+    font: 34px/1.2 var(--fonte-titulo);
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.home-visual__titulo em {
+    color: var(--verde);
+}
+
+.preview-site {
+    display: block;
+    border: 1px solid #3b664a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 15px 20px 0 #102018;
+    background: #0b100d;
+    transform: rotate(-2deg);
+    transition: transform 220ms ease;
+}
+
+.preview-site:hover {
+    transform: rotate(0deg) translateY(-3px);
+}
+
+.preview-site__barra {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 15px;
+    background: #19271e;
+    font: 10px var(--fonte-rotulo);
+    color: #c2d1c6;
+    letter-spacing: 0.1em;
+}
+
+.preview-site__barra i {
+    width: 5px;
+    height: 5px;
+    background: #789a84;
+    border-radius: 50%;
+}
+
+.preview-site__barra span {
+    margin-left: auto;
+}
+
+.preview-site img {
+    width: 100%;
+    aspect-ratio: 1.98;
+    object-fit: contain;
+}
+
+.preview-site__legenda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    padding: 14px 18px;
+    border-top: 1px solid var(--borda);
+}
+
+.preview-site__legenda .icone {
+    color: var(--verde);
+    width: 17px;
+    height: 17px;
+}
+
+.preview-site__legenda .seta {
+    margin-left: auto;
+}
+
+.home-visual__nota {
+    margin: 38px 0 0 20px;
+    padding-left: 14px;
+    border-left: 2px solid var(--verde);
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+.faixa-principios {
+    border-block: 1px solid var(--borda);
+    background: #0e1711;
+}
+
+.faixa-principios .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px;
+    padding-block: 18px;
+}
+
+.faixa-principios span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+.faixa-principios .icone {
+    width: 18px;
+    height: 18px;
+    color: var(--verde);
+}
+
+.home-explorar__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: end;
+    margin-bottom: 38px;
+}
+
+.home-explorar__cabecalho h2 {
+    margin-top: 18px;
+}
+
+.home-explorar__cabecalho > p {
+    max-width: 345px;
+    font-size: 15px;
+    color: var(--texto-suave);
+}
+
+/* Uma composição 2 + 3, sem um card órfão numa terceira linha. */
+.grade-funcionalidades {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card-funcionalidade {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+    padding: 28px;
+    min-height: 302px;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    position: relative;
+    overflow: hidden;
+    transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.card-funcionalidade:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde);
+}
+
+.card-funcionalidade--conceitos,
+.card-funcionalidade--leis {
+    grid-column: span 3;
+    min-height: 298px;
+}
+
+.card-funcionalidade--conceitos {
+    background: #123521;
+    border-color: #2b6c44;
+}
+
+.card-funcionalidade--leis {
+    background: #e6ebe1;
+    color: #15261b;
+}
+
+.card-funcionalidade--quiz {
+    background: var(--verde);
+    border-color: var(--verde);
+    color: #082315;
+}
+
+.card-funcionalidade__topo {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 33px;
+}
+
+.card-funcionalidade__icone {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--borda-ativa);
+    border-radius: 13px;
+    color: var(--verde);
+}
+
+.card-funcionalidade .rotulo {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+.card-funcionalidade h3 {
+    font-size: 30px;
+    max-width: 370px;
+    margin-bottom: 14px;
+}
+
+.card-funcionalidade__texto {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 400px;
+}
+
+.card-funcionalidade__acao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 27px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--verde);
+}
+
+.card-funcionalidade--leis .rotulo,
+.card-funcionalidade--leis .card-funcionalidade__icone,
+.card-funcionalidade--leis .card-funcionalidade__acao,
+.card-funcionalidade--quiz .rotulo,
+.card-funcionalidade--quiz .card-funcionalidade__icone,
+.card-funcionalidade--quiz .card-funcionalidade__acao {
+    color: #153e27;
+    border-color: #6ca184;
+}
+
+.card-funcionalidade--leis .card-funcionalidade__texto,
+.card-funcionalidade--quiz .card-funcionalidade__texto {
+    color: #274b35;
+}
+
+.home-sobre {
+    background: #111f16;
+    border-block: 1px solid var(--borda-ativa);
+}
+
+.home-sobre__texto p {
+    color: var(--texto-suave);
+    margin-bottom: 24px;
+    line-height: 1.9;
+}
+
+.assinatura {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 30px;
+    color: var(--verde-claro);
+    font-size: 14px;
+}
+
+.assinatura .icone {
+    width: 34px;
+    height: 34px;
+}
+
+.convite-quiz {
+    background: var(--verde);
+    color: #0b2717;
+    padding: 38px 0;
+}
+
+.convite-quiz__interior {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.convite-quiz h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.convite-quiz p {
+    font-size: 15px;
+}
+
+@media (max-width: 980px) {
+    .home-hero__grade {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(46px, 8vw, 78px);
+    }
+
+    .home-visual {
+        width: min(660px, 95%);
+        margin-inline: auto;
+    }
+
+    .card-funcionalidade {
+        grid-column: span 3;
+    }
+
+    .card-funcionalidade--quiz {
+        grid-column: span 6;
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-hero {
+        padding: 42px 0 48px;
+    }
+
+    .home-hero__grade {
+        gap: 38px;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(43px, 9vw, 62px);
+    }
+
+    .home-visual__titulo {
+        font-size: 29px;
+    }
+
+    .preview-site {
+        transform: none;
+        box-shadow: 7px 10px 0 #102018;
+    }
+
+    .faixa-principios .container {
+        justify-content: start;
+        gap: 15px 30px;
+    }
+
+    .home-explorar__cabecalho {
+        display: block;
+    }
+
+    .home-explorar__cabecalho > p {
+        margin-top: 22px;
+    }
+
+    .grade-funcionalidades {
+        grid-template-columns: 1fr;
+    }
+
+    .card-funcionalidade {
+        grid-column: auto;
+        min-height: 270px;
+        padding: 24px;
+    }
+
+    .convite-quiz__interior {
+        align-items: start;
+        flex-direction: column;
+    }
+}

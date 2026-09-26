@@ -1,0 +1,1057 @@
+/* =============================================================
+   DIREITOS E DEVERDADE — CSS COMPARTILHADO
+   Abra index.html. Não existe compilação nem biblioteca de estilo.
+   Índice: 1. Base | 2. Navegação | 3. Conteúdo | 4. Interações
+           5. Rodapé | 6. Responsividade e acessibilidade
+   ============================================================= */
+
+/* 1. Cores e regras gerais: altere aqui para mudar o site inteiro. */
+:root {
+    --fundo: #0a0d0b;
+    --superficie: #101612;
+    --superficie-ativa: #122319;
+    --verde: #38e089;
+    --verde-claro: #baf2ce;
+    --texto: #f3f4ee;
+    --texto-suave: #b0bbb3;
+    --borda: #2b3930;
+    --borda-ativa: #368451;
+    --alerta: #ffb8aa;
+    --raio: 24px;
+    --largura: 1200px;
+    --fonte-texto: "Segoe UI", Arial, sans-serif;
+    --fonte-titulo: Georgia, "Times New Roman", serif;
+    --fonte-rotulo: Consolas, "Courier New", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+/* hidden é usado pelo JavaScript para abrir e fechar os painéis. */
+[hidden] {
+    display: none !important;
+}
+
+h1, h2, h3, p, figure {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: clamp(42px, 5.8vw, 84px);
+}
+
+h2 {
+    font-size: clamp(32px, 4vw, 55px);
+}
+
+h3 {
+    font-size: clamp(25px, 2.4vw, 32px);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+button, a, summary {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+svg.icone {
+    width: 23px;
+    height: 23px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.65;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+::selection {
+    background: var(--verde);
+    color: var(--fundo);
+}
+
+:focus-visible {
+    outline: 3px solid var(--verde);
+    outline-offset: 5px;
+}
+
+.container {
+    width: min(var(--largura), calc(100% - 64px));
+    margin-inline: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+.pular-conteudo {
+    position: fixed;
+    left: 20px;
+    top: -100px;
+    z-index: 100;
+    background: var(--verde);
+    color: var(--fundo);
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.pular-conteudo:focus {
+    top: 12px;
+}
+
+.destaque {
+    color: var(--verde);
+}
+
+.rotulo {
+    display: block;
+    color: var(--verde);
+    font-family: var(--fonte-rotulo);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.descricao {
+    color: var(--texto-suave);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 680px;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.botao {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid var(--verde);
+    border-radius: 999px;
+    padding: 12px 22px;
+    background: var(--verde);
+    color: #071b10;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-align: center;
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.botao:hover {
+    background: var(--verde-claro);
+    transform: translateY(-2px);
+}
+
+.botao--secundario {
+    background: transparent;
+    border-color: var(--borda);
+    color: var(--texto);
+}
+
+.botao--secundario:hover {
+    background: var(--superficie-ativa);
+    color: var(--texto);
+}
+
+.botao--escuro {
+    background: var(--fundo);
+    border-color: var(--fundo);
+    color: var(--texto);
+}
+
+.botao--escuro:hover {
+    background: #203c2a;
+}
+
+.link-texto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    color: var(--verde);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.link-texto:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* 2. Cabeçalho repetido nos HTMLs: funciona mesmo sem JavaScript. */
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(10, 13, 11, 0.96);
+    border-bottom: 1px solid var(--borda);
+    backdrop-filter: blur(14px);
+}
+
+.cabecalho__interior {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.marca {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: var(--fonte-titulo);
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.marca span {
+    color: var(--verde);
+    font-style: italic;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navegacao a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+
+.navegacao a:hover,
+.navegacao a[aria-current="page"] {
+    color: var(--verde);
+    border-bottom-color: var(--verde);
+}
+
+.navegacao .atalho-quiz {
+    padding: 0 16px;
+    color: var(--verde);
+    border: 1px solid var(--borda-ativa);
+    border-radius: 999px;
+}
+
+.menu-toggle {
+    display: none;
+    min-height: 46px;
+    min-width: 46px;
+    align-items: center;
+    justify-content: center;
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: var(--superficie);
+}
+
+.noscript-aviso {
+    padding: 18px;
+    color: var(--texto);
+    background: var(--superficie-ativa);
+    border-bottom: 1px solid var(--borda-ativa);
+    text-align: center;
+}
+
+/* 3. Estrutura das páginas de aprendizagem. */
+.hero-pagina {
+    padding: 34px 0 84px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.migalhas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    margin-bottom: 54px;
+}
+
+.migalhas a {
+    color: var(--verde);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.hero-pagina__grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: center;
+    gap: 64px;
+}
+
+.hero-pagina__grid > * {
+    min-width: 0;
+}
+
+.hero-pagina h1 {
+    max-width: 990px;
+    margin-top: 24px;
+    margin-bottom: 28px;
+}
+
+.hero-pagina--ampla h1 {
+    font-size: clamp(47px, 7.4vw, 108px);
+}
+
+.pagina-conceitos h1,
+.pagina-ajuda h1 {
+    font-size: clamp(42px, 5.4vw, 74px);
+}
+
+.nota-conceito {
+    border: 1px solid var(--borda-ativa);
+    border-radius: var(--raio);
+    background: #101912;
+    padding: 34px;
+}
+
+.nota-conceito > .icone {
+    width: 34px;
+    height: 34px;
+    color: var(--verde);
+    margin-bottom: 30px;
+}
+
+.nota-conceito p {
+    margin-top: 18px;
+    color: var(--texto-suave);
+    line-height: 1.85;
+}
+
+.secao {
+    padding: 84px 0;
+}
+
+.secao--linha {
+    border-bottom: 1px solid var(--borda);
+}
+
+.secao--sutil {
+    background: #0d120f;
+    border-block: 1px solid var(--borda);
+}
+
+.cabecalho-secao {
+    margin-bottom: 38px;
+}
+
+.cabecalho-secao h2 {
+    margin-top: 18px;
+    max-width: 860px;
+}
+
+.cabecalho-secao p:not(.rotulo) {
+    margin-top: 20px;
+    color: var(--texto-suave);
+    max-width: 650px;
+}
+
+.grade-2,
+.grade-3 {
+    display: grid;
+    gap: 18px;
+}
+
+.grade-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grade-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cartao {
+    height: 100%;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background: var(--superficie);
+    padding: 30px;
+}
+
+.cartao > .icone {
+    color: var(--verde);
+    width: 29px;
+    height: 29px;
+}
+
+.cartao h3 {
+    margin-top: 38px;
+}
+
+.cartao > .rotulo + h3 {
+    margin-top: 34px;
+}
+
+.cartao p:not(.rotulo) {
+    margin-top: 18px;
+    color: var(--texto-suave);
+    line-height: 1.8;
+}
+
+.cartao--direito {
+    background: #123722;
+    border-color: #2d7648;
+}
+
+.cartao--direito p:not(.rotulo) {
+    color: #c4e9d0;
+}
+
+.grade-editorial {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 58px;
+    align-items: start;
+}
+
+.grade-editorial h2 {
+    margin: 22px 0;
+}
+
+.nota {
+    margin-top: 24px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.nota a,
+.fontes a {
+    color: var(--verde-claro);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.callout {
+    margin-top: 28px;
+    padding: 20px 24px;
+    border-left: 3px solid var(--verde);
+    background: var(--superficie);
+    color: var(--texto-suave);
+}
+
+.fechamento {
+    border: 1px solid var(--borda-ativa);
+    border-radius: var(--raio);
+    background: #101d14;
+    padding: 42px;
+}
+
+.fechamento h2 {
+    max-width: 850px;
+    margin-top: 18px;
+}
+
+.fechamento > p:not(.rotulo) {
+    max-width: 750px;
+    color: var(--texto-suave);
+    margin-top: 24px;
+}
+
+/* 4. Botões de perguntas, acordeões, seletor de áreas e passos. */
+.acordeao-lista {
+    display: grid;
+    gap: 10px;
+}
+
+.acordeao-item {
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.acordeao-item.is-open {
+    background: #101d14;
+    border-color: var(--borda-ativa);
+}
+
+.acordeao-item h3 {
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.acordeao-botao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 72px;
+    background: transparent;
+    color: var(--texto);
+    border: 0;
+    padding: 21px 24px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.acordeao-botao .numero {
+    color: var(--verde);
+    font: 13px var(--fonte-rotulo);
+}
+
+.acordeao-botao .icone {
+    margin-left: auto;
+    color: var(--texto-suave);
+    width: 18px;
+    height: 18px;
+    transition: transform 200ms;
+}
+
+.acordeao-botao[aria-expanded="true"] .icone {
+    transform: rotate(180deg);
+}
+
+.acordeao-painel {
+    padding: 0 26px 26px 58px;
+    color: var(--texto-suave);
+    line-height: 1.9;
+}
+
+.acordeao-botao:hover {
+    color: var(--verde-claro);
+}
+
+.acordeao-botao:focus-visible {
+    outline-offset: -5px;
+    border-radius: 15px;
+}
+
+.participante .acordeao-botao {
+    display: block;
+    min-height: 172px;
+    padding: 28px;
+}
+
+.participante .acordeao-botao .icone {
+    float: right;
+    width: 26px;
+    height: 26px;
+    margin-top: -2px;
+    color: var(--verde);
+}
+
+.participante .nome-participante {
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.participante .acordeao-painel {
+    padding: 0 28px 28px;
+}
+
+.explorador {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.explorador__botoes {
+    display: grid;
+    gap: 10px;
+}
+
+.seletor {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 62px;
+    border-radius: 16px;
+    border: 1px solid var(--borda);
+    background: var(--superficie);
+    color: var(--texto);
+    padding: 18px 22px;
+    text-align: left;
+}
+
+.seletor:hover {
+    border-color: var(--borda-ativa);
+}
+
+.seletor[aria-pressed="true"] {
+    background: #112a1b;
+    border-color: var(--verde);
+}
+
+.seletor .icone {
+    color: var(--verde);
+}
+
+.seletor .seta {
+    margin-left: auto;
+}
+
+.explorador__painel {
+    padding: 36px;
+    border: 1px solid var(--borda-ativa);
+    background: #101d14;
+    border-radius: var(--raio);
+    margin-bottom: 18px;
+}
+
+.explorador__painel h3 {
+    margin-top: 22px;
+    font-size: 40px;
+}
+
+.explorador__painel p:not(.rotulo) {
+    color: var(--texto-suave);
+    margin-top: 22px;
+}
+
+.exemplos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+}
+
+.exemplos-lista li {
+    border-top: 1px solid var(--borda);
+    padding: 16px 0;
+    color: var(--verde-claro);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.exemplos-lista li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: var(--verde);
+    border-radius: 50%;
+    flex: 0 0 auto;
+}
+
+.caminhos-seletor {
+    margin-bottom: 24px;
+}
+
+.caminhos-seletor .seletor {
+    display: block;
+    height: 100%;
+    min-height: 180px;
+    padding: 24px;
+}
+
+.caminhos-seletor strong {
+    display: block;
+    margin: 24px 0 10px;
+    font: 25px/1.2 var(--fonte-titulo);
+}
+
+.caminhos-seletor .resumo {
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.caminho-painel {
+    border-radius: var(--raio);
+    background: #101d14;
+    border: 1px solid var(--borda-ativa);
+    padding: 34px;
+    margin-bottom: 20px;
+}
+
+.caminho-painel h3 {
+    margin: 16px 0 24px;
+}
+
+.caminho-passos {
+    padding-left: 24px;
+    margin-block: 20px;
+}
+
+.caminho-passos li {
+    color: var(--texto-suave);
+    margin: 14px 0;
+}
+
+.caminho-painel.is-interactive .caminho-passos {
+    padding: 0;
+    list-style: none;
+    min-height: 108px;
+}
+
+.caminho-painel.is-interactive .caminho-passos li {
+    font: 27px/1.4 var(--fonte-titulo);
+    color: var(--texto);
+}
+
+.caminho-controles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.caminho-status {
+    color: var(--verde-claro);
+    font-size: 14px;
+}
+
+.fontes {
+    color: var(--texto-suave);
+    font-size: 13px;
+    padding-block: 28px;
+    border-top: 1px solid var(--borda);
+}
+
+.fontes summary {
+    cursor: pointer;
+    min-height: 44px;
+    padding: 10px 0;
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.fontes p,
+.fontes li {
+    margin-top: 10px;
+}
+
+/* 5. Rodapé comum. Contatos são campos a preencher, não links falsos. */
+.rodape {
+    border-top: 1px solid var(--borda);
+    background: #080b09;
+    padding: 54px 0 24px;
+}
+
+.rodape__grade {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.9fr;
+    gap: 52px;
+    padding-bottom: 40px;
+}
+
+.rodape__missao {
+    margin-top: 26px;
+    font: 27px/1.3 var(--fonte-titulo);
+}
+
+.rodape__descricao {
+    margin-top: 18px;
+    max-width: 420px;
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.rodape h2 {
+    font: 600 12px var(--fonte-rotulo);
+    color: var(--verde);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+}
+
+.rodape nav a,
+.rodape__projeto > a {
+    display: block;
+    padding: 7px 0;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.rodape a:hover {
+    color: var(--verde);
+}
+
+.rodape__projeto > p {
+    margin-top: 20px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.rodape__base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid var(--borda);
+    padding-top: 22px;
+    font-size: 12px;
+    color: var(--texto-suave);
+}
+
+/* 6. Adaptação sem biblioteca: estas media queries são CSS normal. */
+@media (max-width: 1100px) {
+    .navegacao {
+        gap: 12px;
+    }
+
+    .navegacao a {
+        font-size: 12px;
+    }
+
+    .marca {
+        font-size: 22px;
+    }
+
+    .hero-pagina__grid,
+    .grade-editorial {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 980px) {
+    .cabecalho__interior {
+        flex-wrap: wrap;
+        min-height: 76px;
+        padding-block: 16px;
+    }
+
+    .js .menu-toggle {
+        display: inline-flex;
+    }
+
+    .navegacao {
+        flex-basis: 100%;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 10px;
+    }
+
+    .js .navegacao {
+        display: none;
+    }
+
+    .js .navegacao.is-open {
+        display: flex;
+    }
+
+    .navegacao a {
+        min-height: 46px;
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    .navegacao .atalho-quiz {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .grade-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-pagina__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nota-conceito {
+        max-width: 720px;
+    }
+
+    .rodape__grade {
+        gap: 32px;
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .rodape__projeto {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .secao {
+        padding-block: 58px;
+    }
+
+    .hero-pagina {
+        padding-top: 24px;
+        padding-bottom: 54px;
+    }
+
+    .migalhas {
+        margin-bottom: 34px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .grade-2,
+    .grade-3,
+    .grade-editorial,
+    .explorador {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao,
+    .nota-conceito,
+    .fechamento,
+    .explorador__painel,
+    .caminho-painel {
+        padding: 25px;
+    }
+
+    .cartao h3 {
+        margin-top: 26px;
+    }
+
+    .acordeao-botao {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .acordeao-painel {
+        padding: 0 20px 22px;
+    }
+
+    .explorador__botoes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .seletor {
+        padding: 14px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .seletor .seta {
+        display: none;
+    }
+
+    .caminhos-seletor .seletor {
+        min-height: auto;
+    }
+
+    .caminhos-seletor strong {
+        margin-top: 14px;
+    }
+
+    .rodape__grade {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 380px) {
+    .marca {
+        font-size: 20px;
+    }
+
+    .cabecalho__interior {
+        gap: 10px;
+    }
+
+    .rotulo {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .cabecalho, .rodape, .menu-toggle, .pular-conteudo {
+        display: none;
+    }
+
+    .secao {
+        padding-block: 24px;
+    }
+}
+
+.nota-conceito__titulo {
+    font-size: 30px;
+}
