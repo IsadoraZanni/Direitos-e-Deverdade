@@ -3,7 +3,9 @@
 > Educação cívica e jurídica em linguagem simples, para quem quer entender seus direitos, seus deveres e como o país funciona.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![React](https://img.shields.io/badge/React-TypeScript-blue)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Licença](https://img.shields.io/badge/licen%C3%A7a-a%20definir-lightgrey)
 
 Projeto Integrador da disciplina **PI: Desenvolvimento de Sistemas Web** (código 218040) da **PUC-Campinas**, desenvolvido pelo grupo **Javacessíveis** (Turma 102).
@@ -28,7 +30,7 @@ Projeto Integrador da disciplina **PI: Desenvolvimento de Sistemas Web** (códig
 
 ## Descrição
 
-**Direitos & Deverdade** é uma aplicação web educacional que torna acessível o conhecimento sobre as leis brasileiras, os direitos e deveres dos cidadãos e as funções dos agentes e órgãos públicos. O conteúdo é apresentado de forma visual, objetiva e interativa, com exemplos do cotidiano no lugar do "juridiquês" e do "politiquês".
+**Direitos & Deverdade** é um site educacional que torna acessível o conhecimento sobre as leis brasileiras, os direitos e deveres dos cidadãos e as funções dos agentes e órgãos públicos. O conteúdo é apresentado de forma visual, objetiva e interativa, com exemplos do cotidiano no lugar do "juridiquês" e do "politiquês".
 
 O projeto tem caráter **social, gratuito e não partidário**, com foco na **sociedade brasileira**.
 
@@ -61,51 +63,55 @@ Páginas do MVP:
 Recursos do sistema:
 
 - Navegação por menu superior e botões de continuidade
-- Cards, acordeões e desafios interativos com feedback ao usuário
+- Cards, itens expansíveis e desafios interativos com feedback ao usuário
 - Layout responsivo (computador, tablet e celular)
 - Sem cadastro ou login, para reduzir barreiras de entrada
 
 ## Tecnologias utilizadas
 
-| Categoria | Tecnologia |
-|-----------|------------|
-| Linguagem | TypeScript |
-| Biblioteca de UI | React |
-| Build e ambiente de desenvolvimento | Vite |
-| Estilização | Tailwind CSS 3.4.17 (com PostCSS) |
-| Rotas | React Router |
-| Animações | Motion |
-| Ícones | Lucide React |
-| Ambiente e dependências | Node.js e npm |
-| Gestão do projeto | Scrum e Kanban no Jira |
-| Versionamento | Git e GitHub |
+O projeto é um site **front-end simples**, com arquivos separados por responsabilidade:
 
-> **Nota:** o MVP é uma Single Page Application (SPA) 100% front-end. Não utiliza banco de dados, back-end, API nem autenticação nesta etapa.
+| Tecnologia | Uso | Arquivos |
+|------------|-----|----------|
+| **HTML5** | Estrutura e conteúdo das páginas | `.html` |
+| **CSS3** | Identidade visual e responsividade | `.css` |
+| **JavaScript** | Interações, quizzes, navegação dinâmica e dados locais | `.js` |
+
+Ferramentas de apoio: **Git e GitHub** (versionamento), **Jira** (Scrum e Kanban) e **GitHub Pages** ou **Vercel** (hospedagem gratuita dos arquivos estáticos).
+
+> **Nota:** o MVP roda direto no navegador. Não utiliza banco de dados, back-end, API, autenticação nem frameworks ou ferramentas de build.
 
 ## Estrutura do projeto
 
 ```
 .
 ├── docs/        # Documentação (PDFs das entregas, wireframes, protótipos)
-├── src/         # Código-fonte
-│   ├── pages/       # Uma página por tema
-│   ├── components/  # Componentes compartilhados (cabeçalho, animações, etc.)
-│   └── App.tsx      # Definição das rotas
+├── src/         # Código-fonte do site
+│   ├── index.html                   # Página Inicial
+│   ├── pages/                       # Demais páginas (um arquivo .html por tema)
+│   │   ├── direitos-e-deveres.html
+│   │   ├── conheca-as-leis.html
+│   │   ├── quem-faz-as-leis.html
+│   │   └── como-usar-seus-direitos.html
+│   ├── css/                         # Estilos
+│   │   └── style.css
+│   └── js/                          # Scripts
+│       └── main.js
 ├── assets/      # Imagens, ícones, vídeos e logos
-├── tests/       # Scripts de testes e validação
-├── database/    # Scripts de banco e modelos ER (reservado para etapas futuras)
-├── config/      # Arquivos de configuração (ESLint, Prettier, etc.)
+├── tests/       # Roteiros de testes e validação
+├── database/    # Reservado para etapas futuras (não usado no MVP)
+├── config/      # Arquivos de configuração (opcional)
 ├── scripts/     # Scripts auxiliares do projeto
 ├── README.md    # Explicação principal do projeto
-├── .gitignore   # Arquivos e pastas ignorados (node_modules, .env, etc.)
+├── .gitignore   # Arquivos e pastas ignorados
 └── LICENSE      # Licença do projeto
 ```
 
-> Ajuste os nomes das subpastas de `src/` conforme a organização real do repositório.
+> Ajuste os nomes de arquivos e subpastas de `src/` conforme a organização real do repositório.
 
 ## Como executar
 
-**Pré-requisito:** [Node.js](https://nodejs.org/) instalado.
+Não é necessário instalar nada.
 
 ```bash
 # 1. Clone o repositório
@@ -113,21 +119,11 @@ git clone <URL-DO-REPOSITORIO>
 
 # 2. Entre na pasta do projeto
 cd <NOME-DA-PASTA>
-
-# 3. Instale as dependências
-npm install
-
-# 4. Inicie o servidor de desenvolvimento
-npm run dev
 ```
 
-Depois, acesse o endereço exibido no terminal (geralmente `http://localhost:5173`).
+Depois, abra o arquivo `src/index.html` no navegador (clique duas vezes ou arraste para a janela do navegador).
 
-Para gerar a versão de produção:
-
-```bash
-npm run build
-```
+**Dica:** no VS Code, a extensão **Live Server** recarrega a página automaticamente a cada alteração. Clique com o botão direito em `index.html` e escolha *Open with Live Server*.
 
 ## Organização do trabalho
 
@@ -137,9 +133,9 @@ Planejamento das sprints:
 
 | Sprint | Foco |
 |--------|------|
-| 1 | Estrutura do projeto, identidade visual e rotas |
-| 2 | Implementação das páginas de conteúdo |
-| 3 | Interações, quiz e responsividade |
+| 1 | Estrutura do projeto, identidade visual e navegação entre páginas |
+| 2 | Implementação das páginas de conteúdo (HTML e CSS) |
+| 3 | Interações em JavaScript, quiz e responsividade |
 | 4 | Testes, revisão textual, acessibilidade, correções e preparação da entrega |
 
 ### Convenções de Git (sugestão)
@@ -151,7 +147,7 @@ Planejamento das sprints:
 
 ## Roadmap
 
-- [x] Estrutura da aplicação, rotas e identidade visual
+- [x] Estrutura do site, navegação e identidade visual
 - [x] Páginas temáticas com componentes interativos
 - [ ] Quiz gamificado por tema de lei, com pontuação instantânea
 - [ ] Pergunta do dia, selecionada automaticamente pela data
@@ -160,7 +156,7 @@ Planejamento das sprints:
 - [ ] Revisão de responsividade e acessibilidade
 - [ ] Publicação de uma versão demonstrável (GitHub Pages ou Vercel)
 
-**Evoluções futuras:**
+**Evoluções futuras (próximos semestres):**
 
 - Login e perfil de usuário, com avatar e conexão com outros usuários
 - Banco de dados para histórico de quizzes, pontuação e acertos/erros
