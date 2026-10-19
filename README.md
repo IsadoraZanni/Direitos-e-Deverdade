@@ -77,9 +77,9 @@ O projeto é um site **front-end simples**, com arquivos separados por responsab
 | **CSS3** | Identidade visual e responsividade | `.css` |
 | **JavaScript** | Interações, quizzes, navegação dinâmica e dados locais | `.js` |
 
-Ferramentas de apoio: **Git e GitHub** (versionamento), **Jira** (Scrum e Kanban) e **GitHub Pages** ou **Vercel** (hospedagem gratuita dos arquivos estáticos).
+Ferramentas de apoio: **Git e GitHub** (versionamento) e **Jira** (Scrum e Kanban).
 
-> **Nota:** o MVP roda direto no navegador. Não utiliza banco de dados, back-end, API, autenticação nem frameworks ou ferramentas de build.
+> **Nota:** o MVP roda direto no navegador, a partir de arquivos locais. Não utiliza banco de dados, back-end, API, autenticação, frameworks, ferramentas de build nem hospedagem.
 
 ## Estrutura do projeto
 
@@ -111,7 +111,7 @@ Ferramentas de apoio: **Git e GitHub** (versionamento), **Jira** (Scrum e Kanban
 
 ## Como executar
 
-Não é necessário instalar nada.
+Não é necessário instalar nada nem hospedar o site: o projeto é entregue como arquivos locais, que podem ser abertos diretamente no navegador ou publicados por quem for avaliar.
 
 ```bash
 # 1. Clone o repositório
@@ -154,7 +154,8 @@ Planejamento das sprints:
 - [ ] Persistência local de progresso, pontuação e sequência de dias
 - [ ] Busca e filtro de conteúdos por tema ou palavra-chave
 - [ ] Revisão de responsividade e acessibilidade
-- [ ] Publicação de uma versão demonstrável (GitHub Pages ou Vercel)
+- [ ] Revisão da semântica das tags HTML (`header`, `nav`, `main`, `section`, `footer`, etc.)
+- [ ] Entrega dos arquivos locais ao professor
 
 **Evoluções futuras (próximos semestres):**
 
