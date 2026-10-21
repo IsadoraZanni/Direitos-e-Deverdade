@@ -97,8 +97,8 @@ Ferramentas de apoio: **Git e GitHub** (versionamento) e **Jira** (Scrum e Kanba
 │   │   ├── style.css
 │   │   └── direitos-e-deveres.css
 │   └── js/                          # Scripts
-│   │   ├── main.js
-│   │   └── direitos-e-deveres.js
+│       ├── main.js
+│       └── direitos-e-deveres.js
 ├── assets/      # Imagens, ícones, vídeos e logos
 ├── tests/       # Roteiros de testes e validação
 ├── database/    # Reservado para etapas futuras (não usado no MVP)
