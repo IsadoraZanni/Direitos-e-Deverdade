@@ -1,0 +1,781 @@
+        body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+/* =========================
+   MODELO VISUAL DA PÁGINA
+   Estes estilos usam o ID da página para limitar seu alcance.
+   ========================= */
+
+#pagina-direitos-e-deveres {
+    margin: 0;
+    background: #ffffff;
+    color: #17231c;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color-scheme: light;
+}
+
+#pagina-direitos-e-deveres,
+#pagina-direitos-e-deveres * {
+    box-sizing: border-box;
+}
+
+#pagina-direitos-e-deveres .container {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+#pagina-direitos-e-deveres .cabecalho {
+    border-bottom: 1px solid #e3e9e2;
+    background: #ffffff;
+}
+
+#pagina-direitos-e-deveres .cabecalho-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 28px;
+    padding-block: 24px;
+}
+
+#pagina-direitos-e-deveres .logo {
+    color: #17231c;
+    font-size: 1.125rem;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    text-decoration: none;
+}
+
+#pagina-direitos-e-deveres .logo span {
+    color: #237347;
+}
+
+#pagina-direitos-e-deveres .navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+}
+
+#pagina-direitos-e-deveres .navegacao a {
+    padding-block: 8px;
+    color: #4c6053;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#pagina-direitos-e-deveres .navegacao a:hover,
+#pagina-direitos-e-deveres .navegacao a.ativo {
+    color: #176b42;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+#pagina-direitos-e-deveres .navegacao .botao-quiz {
+    padding: 9px 18px;
+    border-radius: 8px;
+    background: #173b2c;
+    color: #ffffff;
+}
+
+#pagina-direitos-e-deveres .navegacao .botao-quiz:hover {
+    background: #176b42;
+    color: #ffffff;
+}
+
+#pagina-direitos-e-deveres .hero {
+    padding-block: clamp(48px, 7vw, 88px);
+    background: #fcfdf9;
+}
+
+#pagina-direitos-e-deveres .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 48px;
+}
+
+#pagina-direitos-e-deveres .rotulo {
+    margin: 0 0 16px;
+    color: #176b42;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+#pagina-direitos-e-deveres h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2.75rem, 5.6vw, 4.9rem);
+    font-weight: 750;
+    line-height: 1.06;
+    letter-spacing: -0.06em;
+}
+
+#pagina-direitos-e-deveres h1 span {
+    display: block;
+}
+
+#pagina-direitos-e-deveres .verde {
+    color: #237347;
+}
+
+#pagina-direitos-e-deveres .descricao {
+    max-width: 680px;
+    margin: 0;
+    color: #4c6053;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+#pagina-direitos-e-deveres .acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 24px;
+    margin-top: 28px;
+}
+
+#pagina-direitos-e-deveres .botao-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 9px;
+    background: #173b2c;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+#pagina-direitos-e-deveres .botao-principal:hover {
+    background: #176b42;
+}
+
+#pagina-direitos-e-deveres .link-secundario {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #173b2c;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-underline-offset: 5px;
+}
+
+#pagina-direitos-e-deveres .hero-visual {
+    padding: 36px;
+    border-radius: 24px;
+    background: #173b2c;
+    color: #ffffff;
+}
+
+#pagina-direitos-e-deveres .hero-visual .rotulo {
+    color: #c4ed80;
+}
+
+#pagina-direitos-e-deveres .hero-visual h2 {
+    margin: 0 0 24px;
+    font-size: clamp(1.65rem, 2.5vw, 2.2rem);
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+#pagina-direitos-e-deveres .hero-visual h2 em {
+    display: block;
+    color: #c4ed80;
+    font-style: normal;
+}
+
+#pagina-direitos-e-deveres .hero-visual > p:not(.rotulo) {
+    margin: 0;
+    color: #e0ece3;
+    font-size: 0.925rem;
+    line-height: 1.8;
+}
+
+#pagina-direitos-e-deveres .nota-visual {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #496456;
+    color: #c4ed80;
+    font-size: 0.8rem;
+}
+
+#pagina-direitos-e-deveres .nota-visual p {
+    margin: 0;
+}
+
+#pagina-direitos-e-deveres .direitos-conceitos,
+#pagina-direitos-e-deveres .direitos-situacoes,
+#pagina-direitos-e-deveres .direitos-continuar {
+    padding-block: clamp(48px, 6vw, 80px);
+}
+
+#pagina-direitos-e-deveres .direitos-conceitos h2,
+#pagina-direitos-e-deveres .direitos-situacoes h2,
+#pagina-direitos-e-deveres .direitos-continuar h2 {
+    max-width: 760px;
+    margin: 0 0 28px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+#pagina-direitos-e-deveres .direitos-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+#pagina-direitos-e-deveres .direitos-card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid #d5e1d7;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+#pagina-direitos-e-deveres .direitos-card h3 {
+    margin: 0 0 16px;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+}
+
+#pagina-direitos-e-deveres .direitos-card p {
+    margin: 0;
+    color: #4c6053;
+    font-size: 0.925rem;
+    line-height: 1.8;
+}
+
+#pagina-direitos-e-deveres #conceito-direitos {
+    background: #edf5e8;
+}
+
+#pagina-direitos-e-deveres #conceito-deveres {
+    background: #f6f8f5;
+}
+
+#pagina-direitos-e-deveres .direitos-observacao {
+    max-width: 760px;
+    margin: 24px 0 0;
+    color: #4c6053;
+    font-size: 0.875rem;
+    line-height: 1.8;
+}
+
+#pagina-direitos-e-deveres .direitos-situacoes {
+    background: #f6f8f5;
+}
+
+#pagina-direitos-e-deveres #cards-situacoes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Uma faixa de imagem por card mantém o conjunto consistente. */
+
+#pagina-direitos-e-deveres #cards-situacoes .direitos-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+#pagina-direitos-e-deveres .situacao-imagem {
+    margin: 0;
+    background: #edf5e8;
+}
+
+#pagina-direitos-e-deveres .situacao-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+#pagina-direitos-e-deveres .situacao-conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 24px;
+}
+
+#pagina-direitos-e-deveres .situacao-conteudo h3 {
+    font-size: 1.15rem;
+}
+
+#pagina-direitos-e-deveres .situacao-conteudo .situacao-descricao {
+    margin-bottom: 20px;
+}
+
+#pagina-direitos-e-deveres #cards-situacoes .direitos-pergunta {
+    margin-top: auto;
+}
+
+#pagina-direitos-e-deveres .direitos-card .direitos-pergunta {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #d5e1d7;
+    color: #173b2c;
+    font-weight: 600;
+}
+
+#pagina-direitos-e-deveres .direitos-continuar {
+    background: #173b2c;
+    color: #ffffff;
+}
+
+#pagina-direitos-e-deveres .direitos-continuar .rotulo {
+    color: #c4ed80;
+}
+
+#pagina-direitos-e-deveres .direitos-continuar .descricao {
+    color: #e0ece3;
+}
+
+#pagina-direitos-e-deveres .direitos-continuar .botao-principal {
+    background: #c4ed80;
+    color: #17231c;
+}
+
+#pagina-direitos-e-deveres .direitos-continuar .botao-principal:hover {
+    background: #d8f5ab;
+}
+
+#pagina-direitos-e-deveres .direitos-continuar .link-secundario {
+    color: #ffffff;
+}
+
+#pagina-direitos-e-deveres .rodape-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    padding-block: 30px;
+}
+
+#pagina-direitos-e-deveres .rodape p {
+    margin: 0;
+    color: #4c6053;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 860px) {
+    #pagina-direitos-e-deveres .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    #pagina-direitos-e-deveres .container {
+        width: calc(100% - 32px);
+    }
+
+    #pagina-direitos-e-deveres .cabecalho-conteudo {
+        align-items: flex-start;
+    }
+
+    #pagina-direitos-e-deveres .navegacao {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 16px;
+    }
+
+    #pagina-direitos-e-deveres .navegacao a {
+        min-height: 44px;
+        padding-block: 10px;
+    }
+
+    #pagina-direitos-e-deveres .navegacao .botao-quiz {
+        align-self: start;
+        justify-self: start;
+    }
+
+    #pagina-direitos-e-deveres .hero-visual {
+        padding: 26px;
+    }
+
+    #pagina-direitos-e-deveres .direitos-cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #pagina-direitos-e-deveres #cards-situacoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #pagina-direitos-e-deveres .direitos-card {
+        padding: 24px;
+    }
+}
+
+/* =========================
+   CONTEXTO HISTÓRICO
+   Estilos limitados à seção da linha do tempo.
+   ========================= */
+
+#contexto-historico {
+    --historia-verde: #176b42;
+    --historia-verde-claro: #e8f4ec;
+    --historia-texto: #17231c;
+    --historia-texto-suave: #4c6053;
+    --historia-fundo: #f6f8f5;
+    --historia-card: #ffffff;
+    --historia-borda: #d5e1d7;
+
+    padding: clamp(40px, 7vw, 88px) 0;
+    background: var(--historia-fundo);
+    color: var(--historia-texto);
+}
+
+#contexto-historico,
+#contexto-historico * {
+    box-sizing: border-box;
+}
+
+#contexto-historico .container {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+#contexto-historico .rotulo {
+    margin: 0 0 12px;
+    color: var(--historia-verde);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+#contexto-historico h2 {
+    max-width: 760px;
+    margin: 0 0 16px;
+    font-size: clamp(1.65rem, 3.4vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+#contexto-historico .descricao {
+    max-width: 720px;
+    margin: 0;
+    color: var(--historia-texto-suave);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+#contexto-historico .historia-instrucao {
+    margin: 20px 0 36px;
+    color: var(--historia-verde);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   LINHA CENTRAL E PONTOS
+   ========================= */
+
+#contexto-historico .linha-tempo {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 8px 0 16px;
+    list-style: none;
+}
+
+#contexto-historico .linha-tempo::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 16px;
+    left: 50%;
+    width: 2px;
+    background: var(--historia-borda);
+    transform: translateX(-50%);
+}
+
+#contexto-historico .linha-tempo-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#contexto-historico .linha-tempo-item + .linha-tempo-item {
+    margin-top: 24px;
+}
+
+#contexto-historico .linha-tempo-item::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 32px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--historia-verde);
+    border-radius: 50%;
+    background: var(--historia-fundo);
+    transform: translateX(-50%);
+    transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+
+#contexto-historico .linha-tempo-item::after {
+    content: "";
+    position: absolute;
+    top: 39px;
+    left: calc(50% - 32px);
+    width: 32px;
+    height: 2px;
+    background: var(--historia-borda);
+}
+
+#contexto-historico .linha-tempo-item:nth-child(even)::after {
+    left: 50%;
+}
+
+#contexto-historico .linha-tempo-item.esta-aberto::before {
+    background: var(--historia-verde);
+    box-shadow: 0 0 0 6px var(--historia-verde-claro);
+}
+
+
+/* =========================
+   CARDS ALTERNADOS
+   ========================= */
+
+#contexto-historico .evento-card {
+    position: relative;
+    display: block;
+    width: calc(50% - 32px);
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--historia-borda);
+    border-radius: 18px;
+    background: var(--historia-card);
+    transition: border-color 180ms ease;
+}
+
+#contexto-historico .linha-tempo-item:nth-child(even) .evento-card {
+    margin-left: auto;
+}
+
+#contexto-historico .linha-tempo-item.esta-aberto .evento-card {
+    border-color: var(--historia-verde);
+}
+
+#contexto-historico .evento-resumo {
+    display: block;
+    padding: 24px;
+    border-radius: 18px;
+    list-style: none;
+}
+
+#contexto-historico .evento-resumo::-webkit-details-marker {
+    display: none;
+}
+
+#contexto-historico .evento-resumo:hover {
+    background: var(--historia-verde-claro);
+}
+
+#contexto-historico .evento-resumo .evento-cabecalho {
+    margin: 0;
+    font: inherit;
+}
+
+#contexto-historico .evento-data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--historia-verde);
+}
+
+#contexto-historico .evento-data time {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+#contexto-historico .evento-local {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+#contexto-historico .evento-titulo {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+}
+
+#contexto-historico .evento-chamada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    color: var(--historia-verde);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+#contexto-historico .evento-sinal {
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 180ms ease;
+}
+
+#contexto-historico .evento-fechar {
+    display: none;
+}
+
+#contexto-historico details[open] .evento-abrir {
+    display: none;
+}
+
+#contexto-historico details[open] .evento-fechar {
+    display: inline;
+}
+
+#contexto-historico details[open] .evento-sinal {
+    transform: rotate(45deg);
+}
+
+
+/* =========================
+   CONTEÚDO EXPANDIDO E IMAGENS
+   ========================= */
+
+#contexto-historico .evento-conteudo {
+    padding: 0 24px 24px;
+}
+
+#contexto-historico .evento-conteudo > p {
+    margin: 0;
+    color: var(--historia-texto-suave);
+    font-size: 0.925rem;
+    line-height: 1.75;
+}
+
+#contexto-historico .evento-imagem {
+    margin: 22px 0;
+}
+
+#contexto-historico .evento-imagem img,
+#contexto-historico .evento-imagem-placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+#contexto-historico .evento-imagem-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    border: 1px dashed var(--historia-borda);
+    background: var(--historia-verde-claro);
+    color: var(--historia-verde);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+#contexto-historico .evento-imagem-ano {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    line-height: 1;
+}
+
+#contexto-historico figcaption {
+    margin-top: 8px;
+    color: var(--historia-texto-suave);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+#contexto-historico .evento-conteudo .evento-reflexao {
+    padding-top: 16px;
+    border-top: 1px solid var(--historia-borda);
+    color: var(--historia-texto);
+}
+
+#contexto-historico .direitos-observacao,
+#contexto-historico .direitos-fontes {
+    max-width: 760px;
+    margin: 24px 0 0;
+    color: var(--historia-texto-suave);
+    font-size: 0.8rem;
+    line-height: 1.75;
+}
+
+#contexto-historico .direitos-fontes a {
+    color: var(--historia-verde);
+    text-underline-offset: 3px;
+}
+
+
+/* =========================
+   CELULARES: LINHA NA ESQUERDA
+   ========================= */
+
+@media (max-width: 640px) {
+    #contexto-historico .container {
+        width: calc(100% - 32px);
+    }
+
+    #contexto-historico .linha-tempo::before,
+    #contexto-historico .linha-tempo-item::before {
+        left: 8px;
+    }
+
+    #contexto-historico .linha-tempo-item {
+        padding-left: 36px;
+    }
+
+    #contexto-historico .linha-tempo-item::after,
+    #contexto-historico .linha-tempo-item:nth-child(even)::after {
+        left: 8px;
+        width: 28px;
+    }
+
+    #contexto-historico .evento-card {
+        width: 100%;
+    }
+
+    #contexto-historico .evento-resumo {
+        padding: 20px;
+    }
+
+    #contexto-historico .evento-conteudo {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #contexto-historico .linha-tempo-item::before,
+    #contexto-historico .evento-card,
+    #contexto-historico .evento-sinal {
+        transition: none;
+    }
+}
