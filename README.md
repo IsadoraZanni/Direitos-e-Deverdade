@@ -90,15 +90,16 @@ Ferramentas de apoio: **Git e GitHub** (versionamento) e **Jira** (Scrum e Kanba
 │   ├── index.html                   # Página Inicial
 │   ├── pages/                       # Demais páginas (um arquivo .html por tema)
 │   │   ├── direitos-e-deveres.html
-│   │   ├── conheca-as-leis.html
-│   │   ├── quem-faz-as-leis.html
-│   │   └── como-usar-seus-direitos.html
+│   │   └── conheca-as-leis.html
 │   ├── css/                         # Estilos
 │   │   ├── style.css
-│   │   └── direitos-e-deveres.css
+│   │   ├── direitos-e-deveres.css
+│   │   ├── lei-detalhe.css
+│   │   └── conheça-as-leis.css
 │   └── js/                          # Scripts
 │       ├── main.js
-│       └── direitos-e-deveres.js
+│       ├── direitos-e-deveres.js
+│       └── conheça-as-leis.js
 ├── assets/      # Imagens, ícones, vídeos e logos
 ├── tests/       # Roteiros de testes e validação
 ├── database/    # Reservado para etapas futuras (não usado no MVP)
