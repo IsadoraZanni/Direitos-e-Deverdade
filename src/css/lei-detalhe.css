@@ -1,0 +1,157 @@
+/* Organização compartilhada pelas oito páginas de leis. */
+
+.hero-lei {
+    padding-top: 28px;
+}
+
+.hero-lei h1 {
+    font-size: clamp(2.35rem, 3.8vw, 3.65rem);
+}
+
+.hero-lei h1 .verde {
+    margin-top: 16px;
+    font-size: 0.73em;
+    line-height: 1.15;
+}
+
+.caminho {
+    margin-bottom: 44px;
+}
+
+.caminho ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin: 0;
+    padding: 0;
+    color: var(--texto-suave);
+    list-style: none;
+    font-size: 0.75rem;
+}
+
+.caminho li + li::before {
+    content: "/";
+    margin-right: 12px;
+    color: #75866a;
+}
+
+.foto-lei img {
+    aspect-ratio: 1.25;
+}
+
+.foto-lei.foto-arte img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.foto-lei.foto-acervo img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+.secao-contexto {
+    border-top: 1px solid var(--borda);
+}
+
+.contexto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+
+.contexto-grid h2 {
+    font-size: 2rem;
+}
+
+.contexto-grid > div > p:not(.rotulo) {
+    color: var(--texto-suave);
+}
+
+.referencia-curta {
+    font-size: 0.8rem;
+}
+
+.exemplo-caminho {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda);
+    color: var(--verde);
+    font-size: 0.875rem;
+}
+
+.exemplo-caminho p {
+    margin-top: 8px;
+}
+
+.bloco-apoio {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+    gap: 64px;
+}
+
+.bloco-apoio > div > p:not(.rotulo) {
+    color: var(--texto-suave);
+}
+
+.fontes-card {
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--fundo);
+}
+
+.fontes-card p,
+.fontes-card a {
+    font-size: 0.875rem;
+}
+
+.fontes-card .data-revisao {
+    margin-top: 20px;
+    font-size: 0.73rem;
+}
+
+.proxima-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.card-proximo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--verde-claro);
+    color: var(--verde-escuro);
+    text-decoration: none;
+}
+
+.card-proximo:hover {
+    border-color: var(--verde);
+}
+
+.card-proximo span {
+    font-size: 0.75rem;
+}
+
+.card-proximo strong {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 820px) {
+    .contexto-grid,
+    .bloco-apoio,
+    .proxima-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .foto-lei img {
+        aspect-ratio: 1.65;
+    }
+}
