@@ -1,0 +1,75 @@
+/* Três Poderes e caminho de uma lei. */
+
+.processo-mini {
+    margin: 30px 0;
+    padding-left: 24px;
+}
+
+.processo-mini li {
+    padding: 12px 0 12px 8px;
+    border-bottom: 1px solid #496456;
+    font-size: 0.9rem;
+}
+
+.processo-mini li::marker {
+    color: var(--lima);
+    font-weight: 700;
+}
+
+.poder-card .poder-exemplo {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda);
+    font-size: 0.82rem;
+}
+
+.processo-lista {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 36px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.processo-etapa {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 24px;
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--fundo);
+}
+
+.numero-etapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.processo-etapa p {
+    color: var(--texto-suave);
+    font-size: 0.94rem;
+}
+
+.processo-etapa .processo-nota {
+    padding-top: 14px;
+    border-top: 1px solid var(--borda);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 540px) {
+    .processo-etapa {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 24px;
+    }
+}
