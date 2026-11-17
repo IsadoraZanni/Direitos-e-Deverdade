@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+        <meta
+            name="description"
+            content="Teste suas ideias com oito perguntas sobre direitos e leis brasileiras."
+        >
+        <meta
+            name="theme-color"
+            content="#173b2c"
+        >
+        <title>Quiz | Direitos e Deverdade</title>
+        <link
+            rel="icon"
+            href="../../assets/icones/favicon.png"
+            type="image/png"
+        >
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+        <link
+            rel="stylesheet"
+            href="../css/quiz.css"
+        >
+        <script
+            src="../js/main.js"
+            defer
+        >
+        </script>
+        <script
+            src="../js/quiz.js"
+            defer
+        >
+        </script>
+    </head>
+    <body
+        id="pagina-quiz"
+        data-pagina="quiz"
+    >
+        <!-- Cabeçalho e navegação: repetidos nas páginas para funcionar sem JavaScript. -->
+        <a
+            class="pular-conteudo"
+            href="#conteudo-principal"
+        >
+            Pular para o conteúdo
+        </a>
+        <header
+            class="cabecalho"
+            id="cabecalho"
+        >
+            <div class="container cabecalho-conteudo">
+                <a
+                    class="logo"
+                    id="logo-cabecalho"
+                    href="../index.html"
+                >
+                    Direitos
+                    <span>&amp;</span>
+                    Deverdade.
+                </a>
+                <button
+                    class="botao-menu"
+                    id="botao-menu"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="navegacao-principal"
+                    hidden
+                >
+                    Menu
+                    <span aria-hidden="true">☰</span>
+                </button>
+                <nav
+                    class="navegacao"
+                    id="navegacao-principal"
+                    aria-label="Navegação principal"
+                >
+                    <a
+                        id="link-inicio"
+                        href="../index.html"
+                    >
+                        Início
+                    </a>
+                    <a
+                        id="link-direitos-e-deveres"
+                        href="../pages/direitos-e-deveres.html"
+                    >
+                        Direitos e Deveres
+                    </a>
+                    <a
+                        id="link-conheca-as-leis"
+                        href="../pages/conheca-as-leis.html"
+                    >
+                        Conheça as Leis
+                    </a>
+                    <a
+                        id="link-quem-faz-as-leis"
+                        href="../pages/quem-faz-as-leis.html"
+                    >
+                        Quem faz as leis?
+                    </a>
+                    <a
+                        id="link-como-usar-seus-direitos"
+                        href="../pages/como-usar-seus-direitos.html"
+                    >
+                        Como usar seus direitos
+                    </a>
+                    <a
+                        class="botao-quiz ativo"
+                        id="link-quiz"
+                        href="../pages/direitos-e-deveres.html"
+                        aria-current="page"
+                    >
+                        Quiz
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main id="conteudo-principal">
+            <section
+                class="hero hero-interno hero-quiz"
+                id="introducao"
+                aria-labelledby="titulo-pagina"
+            >
+                <div class="container">
+                    <p class="rotulo">APRENDER TAMBÉM É EXPERIMENTAR</p>
+                    <h1 id="titulo-pagina">
+                        O que você faria?
+                        <span class="verde">Um quiz para pensar.</span>
+                    </h1>
+                    <p class="descricao">
+                        Oito perguntas sobre os temas do site. Escolha uma resposta em cada questão e veja a
+                        explicação no final. Não é uma prova: você pode tentar de novo.
+                    </p>
+                    <div class="etiquetas">
+                        <span>8 perguntas</span>
+                        <span>Sem cronômetro</span>
+                        <span>Com explicações</span>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="secao"
+                id="quiz"
+                aria-labelledby="titulo-quiz"
+            >
+                <div class="container leitura">
+                    <h2 id="titulo-quiz">Vamos colocar as ideias em prática?</h2>
+                    <p id="quiz-instrucao">
+                        Marque uma alternativa por pergunta. A correção funciona com JavaScript ativado no
+                        navegador.
+                    </p>
+                    <noscript>
+                        <p class="nota-conteudo">
+                            Ative o JavaScript para receber a correção automática. Você pode ler as perguntas
+                            e consultar as leis pelo menu.
+                        </p>
+                    </noscript>
+                    <p
+                        class="quiz-status"
+                        id="quiz-status"
+                        role="status"
+                        aria-live="polite"
+                    >
+                    </p>
+                    <form
+                        id="formulario-quiz"
+                        aria-describedby="quiz-instrucao"
+                        hidden
+                    >
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-1"
+                        >
+                            <legend>
+                                <span class="quiz-numero">01</span>
+                                Aos 16 e 17 anos, como funciona o voto no Brasil?
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-1-opcao-0"
+                                >
+                                    <input
+                                        id="questao-1-opcao-0"
+                                        type="radio"
+                                        name="questao-1"
+                                        value="0"
+                                    >
+                                    <span>É facultativo: o jovem pode escolher votar.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-1-opcao-1"
+                                >
+                                    <input
+                                        id="questao-1-opcao-1"
+                                        type="radio"
+                                        name="questao-1"
+                                        value="1"
+                                    >
+                                    <span>É sempre obrigatório.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-1-opcao-2"
+                                >
+                                    <input
+                                        id="questao-1-opcao-2"
+                                        type="radio"
+                                        name="questao-1"
+                                        value="2"
+                                    >
+                                    <span>É proibido votar antes dos 18 anos.</span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-1"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-2"
+                        >
+                            <legend>
+                                <span class="quiz-numero">02</span>
+                                Uma estudante não entendeu o critério de avaliação. O que o ECA assegura?
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-2-opcao-0"
+                                >
+                                    <input
+                                        id="questao-2-opcao-0"
+                                        type="radio"
+                                        name="questao-2"
+                                        value="0"
+                                    >
+                                    <span>Que toda nota questionada seja automaticamente aumentada.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-2-opcao-1"
+                                >
+                                    <input
+                                        id="questao-2-opcao-1"
+                                        type="radio"
+                                        name="questao-2"
+                                        value="1"
+                                    >
+                                    <span>
+                                        Que ela possa questionar critérios e recorrer às instâncias escolares
+                                        superiores.
+                                    </span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-2-opcao-2"
+                                >
+                                    <input
+                                        id="questao-2-opcao-2"
+                                        type="radio"
+                                        name="questao-2"
+                                        value="2"
+                                    >
+                                    <span>Que apenas os professores possam falar sobre avaliações.</span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-2"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-3"
+                        >
+                            <legend>
+                                <span class="quiz-numero">03</span>
+                                Qual situação apresenta características de bullying?
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-3-opcao-0"
+                                >
+                                    <input
+                                        id="questao-3-opcao-0"
+                                        type="radio"
+                                        name="questao-3"
+                                        value="0"
+                                    >
+                                    <span>Uma discordância respeitosa sobre um trabalho.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-3-opcao-1"
+                                >
+                                    <input
+                                        id="questao-3-opcao-1"
+                                        type="radio"
+                                        name="questao-3"
+                                        value="1"
+                                    >
+                                    <span>Uma conversa para resolver um mal-entendido.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-3-opcao-2"
+                                >
+                                    <input
+                                        id="questao-3-opcao-2"
+                                        type="radio"
+                                        name="questao-3"
+                                        value="2"
+                                    >
+                                    <span>Humilhações intencionais e repetidas contra um colega.</span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-3"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-4"
+                        >
+                            <legend>
+                                <span class="quiz-numero">04</span>
+                                Nos serviços abrangidos pelo ECA Digital, a privacidade deve...
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-4-opcao-0"
+                                >
+                                    <input
+                                        id="questao-4-opcao-0"
+                                        type="radio"
+                                        name="questao-4"
+                                        value="0"
+                                    >
+                                    <span>
+                                        Depender apenas de o adolescente descobrir todas as configurações.
+                                    </span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-4-opcao-1"
+                                >
+                                    <input
+                                        id="questao-4-opcao-1"
+                                        type="radio"
+                                        name="questao-4"
+                                        value="1"
+                                    >
+                                    <span>
+                                        Começar com as configurações mais protetivas disponíveis, conforme a
+                                        lei.
+                                    </span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-4-opcao-2"
+                                >
+                                    <input
+                                        id="questao-4-opcao-2"
+                                        type="radio"
+                                        name="questao-4"
+                                        value="2"
+                                    >
+                                    <span>Ser uma opção que a plataforma pode ignorar.</span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-4"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-5"
+                        >
+                            <legend>
+                                <span class="quiz-numero">05</span>
+                                O direito de arrependimento de sete dias do artigo 49 do CDC se aplica...
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-5-opcao-0"
+                                >
+                                    <input
+                                        id="questao-5-opcao-0"
+                                        type="radio"
+                                        name="questao-5"
+                                        value="0"
+                                    >
+                                    <span>
+                                        Às contratações fora do estabelecimento comercial, como uma compra
+                                        pela internet.
+                                    </span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-5-opcao-1"
+                                >
+                                    <input
+                                        id="questao-5-opcao-1"
+                                        type="radio"
+                                        name="questao-5"
+                                        value="1"
+                                    >
+                                    <span>
+                                        Automaticamente a qualquer compra, inclusive toda compra presencial.
+                                    </span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-5-opcao-2"
+                                >
+                                    <input
+                                        id="questao-5-opcao-2"
+                                        type="radio"
+                                        name="questao-5"
+                                        value="2"
+                                    >
+                                    <span>A qualquer produto, por qualquer motivo e sem prazo.</span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-5"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-6"
+                        >
+                            <legend>
+                                <span class="quiz-numero">06</span>
+                                Uma escola particular pode cobrar uma taxa extra para cumprir as medidas de
+                                inclusão do artigo 28, § 1º, da LBI?
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-6-opcao-0"
+                                >
+                                    <input
+                                        id="questao-6-opcao-0"
+                                        type="radio"
+                                        name="questao-6"
+                                        value="0"
+                                    >
+                                    <span>Sim, sempre que avisar na matrícula.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-6-opcao-1"
+                                >
+                                    <input
+                                        id="questao-6-opcao-1"
+                                        type="radio"
+                                        name="questao-6"
+                                        value="1"
+                                    >
+                                    <span>Sim, desde que use outro nome para a taxa.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-6-opcao-2"
+                                >
+                                    <input
+                                        id="questao-6-opcao-2"
+                                        type="radio"
+                                        name="questao-6"
+                                        value="2"
+                                    >
+                                    <span>Não. A lei proíbe valores adicionais para cumprir essas medidas.</span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-6"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-7"
+                        >
+                            <legend>
+                                <span class="quiz-numero">07</span>
+                                Um colega sofre ofensas raciais no grupo. Qual atitude ajuda a protegê-lo?
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-7-opcao-0"
+                                >
+                                    <input
+                                        id="questao-7-opcao-0"
+                                        type="radio"
+                                        name="questao-7"
+                                        value="0"
+                                    >
+                                    <span>Repassar a ofensa para toda a escola.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-7-opcao-1"
+                                >
+                                    <input
+                                        id="questao-7-opcao-1"
+                                        type="radio"
+                                        name="questao-7"
+                                        value="1"
+                                    >
+                                    <span>Acolher, evitar espalhar a agressão e procurar apoio adequado.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-7-opcao-2"
+                                >
+                                    <input
+                                        id="questao-7-opcao-2"
+                                        type="radio"
+                                        name="questao-7"
+                                        value="2"
+                                    >
+                                    <span>Dizer que ele precisa resolver tudo sozinho.</span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-7"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <fieldset
+                            class="quiz-questao"
+                            id="questao-8"
+                        >
+                            <legend>
+                                <span class="quiz-numero">08</span>
+                                A Lei Maria da Penha reconhece somente a violência física?
+                            </legend>
+                            <div class="quiz-alternativas">
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-8-opcao-0"
+                                >
+                                    <input
+                                        id="questao-8-opcao-0"
+                                        type="radio"
+                                        name="questao-8"
+                                        value="0"
+                                    >
+                                    <span>Sim, outras violências não estão previstas.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-8-opcao-1"
+                                >
+                                    <input
+                                        id="questao-8-opcao-1"
+                                        type="radio"
+                                        name="questao-8"
+                                        value="1"
+                                    >
+                                    <span>Sim, e apenas quando o casal mora junto.</span>
+                                </label>
+                                <label
+                                    class="quiz-alternativa"
+                                    for="questao-8-opcao-2"
+                                >
+                                    <input
+                                        id="questao-8-opcao-2"
+                                        type="radio"
+                                        name="questao-8"
+                                        value="2"
+                                    >
+                                    <span>
+                                        Não. Também reconhece violência psicológica, sexual, patrimonial e
+                                        moral.
+                                    </span>
+                                </label>
+                            </div>
+                            <div
+                                class="quiz-feedback"
+                                id="feedback-8"
+                                hidden
+                            >
+                            </div>
+                        </fieldset>
+                        <div class="acoes quiz-acoes">
+                            <button
+                                class="botao-principal"
+                                id="corrigir-quiz"
+                                type="submit"
+                            >
+                                Conferir minhas respostas →
+                            </button>
+                            <button
+                                class="botao-contorno"
+                                id="reiniciar-quiz"
+                                type="button"
+                            >
+                                Começar de novo
+                            </button>
+                        </div>
+                    </form>
+                    <div
+                        class="quiz-resultado"
+                        id="quiz-resultado"
+                        tabindex="-1"
+                        aria-labelledby="titulo-resultado"
+                        hidden
+                    >
+                        <p class="rotulo">CADA RESPOSTA É UMA DESCOBERTA</p>
+                        <h2 id="titulo-resultado">Seu resultado</h2>
+                        <p
+                            class="quiz-pontuacao"
+                            id="quiz-pontuacao"
+                        >
+                        </p>
+                        <p id="quiz-mensagem">
+                        </p>
+                        <a
+                            class="link-secundario"
+                            href="#questao-1"
+                        >
+                            Revisar as explicações ↑
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="faixa-continuar"
+                id="continuar"
+                aria-labelledby="titulo-continuar"
+            >
+                <div class="container faixa-grid">
+                    <div>
+                        <p class="rotulo">SEU PRÓXIMO PASSO</p>
+                        <h2 id="titulo-continuar">Uma pergunta levou a outra?</h2>
+                        <p>Volte à biblioteca de leis e explore o assunto que despertou sua curiosidade.</p>
+                    </div>
+                    <div class="acoes">
+                        <a
+                            class="botao-principal"
+                            href="../pages/conheca-as-leis.html"
+                        >
+                            Conhecer as leis
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <a
+                            class="link-secundario"
+                            href="../pages/direitos-e-deveres.html"
+                        >
+                            Rever direitos e deveres ↗
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer
+            class="rodape"
+            id="rodape"
+        >
+            <div class="container rodape-conteudo">
+                <div>
+                    <a
+                        class="logo"
+                        id="logo-rodape"
+                        href="../index.html"
+                    >
+                        Direitos
+                        <span>&amp;</span>
+                        Deverdade.
+                    </a>
+                    <p>Educação cidadã para entender, participar e transformar.</p>
+                </div>
+                <div class="rodape-links">
+                    <a href="../pages/creditos-imagens.html">Créditos das imagens</a>
+                    <a href="../pages/conheca-as-leis.html">Conheça as leis</a>
+                    <a href="../pages/como-usar-seus-direitos.html">Onde buscar apoio</a>
+                    <a href="#cabecalho">Voltar ao topo ↑</a>
+                </div>
+            </div>
+            <div class="container rodape-nota">
+                <p>
+                    Projeto educacional. Os exemplos são fictícios. Consulte as fontes oficiais para conhecer
+                    o texto completo das leis.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

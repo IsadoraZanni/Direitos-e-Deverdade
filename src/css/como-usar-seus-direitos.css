@@ -1,0 +1,76 @@
+/* Passos de orientação e canais oficiais de apoio. */
+
+.passos-grade {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: 36px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.passos-grade li {
+    padding: 24px 0;
+    border-top: 2px solid var(--verde);
+}
+
+.passos-grade h3 {
+    font-size: 1.15rem;
+}
+
+.passos-grade p {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.canal-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--fundo-suave);
+}
+
+.canal-card p {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.canal-card .canal-numero {
+    margin-bottom: 20px;
+    color: var(--verde);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+.canal-card a {
+    margin-top: auto;
+    padding-top: 16px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.canal-emergencia {
+    border-color: #d4bfa0;
+    background: #f5efe2;
+}
+
+.canal-emergencia .canal-numero {
+    color: #805417;
+}
+
+@media (max-width: 900px) {
+    .passos-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .passos-grade {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+}
