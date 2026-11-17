@@ -259,28 +259,6 @@ As tarefas são organizadas nos seguintes estados:
 | 3 | Implementação das interações em JavaScript, filtros e quiz. |
 | 4 | Testes, revisão textual, acessibilidade, responsividade e preparação da entrega. |
 
-### Convenções de Git
-
-Para manter a organização do código-fonte e facilitar a colaboração, são adotadas as seguintes convenções:
-
-- Branch principal: `main`.
-- Criação de branches específicas para cada tarefa.
-- Identificação das branches utilizando o código correspondente no Jira.
-- Commits objetivos, descrevendo as alterações realizadas.
-- Revisão das alterações antes da integração à branch principal.
-
-Exemplo de nomenclatura:
-
-```text
-feature/JV-6-quem-faz-as-leis-html
-```
-
-Exemplo de commit:
-
-```text
-Adiciona página Quem faz as leis
-```
-
 ## Roadmap
 
 ### Desenvolvimento do MVP
