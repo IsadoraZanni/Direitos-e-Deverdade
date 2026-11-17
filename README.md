@@ -33,19 +33,19 @@ Projeto Integrador da disciplina **PI: Desenvolvimento de Sistemas Web** (códig
 
 ## Descrição
 
-**Direitos & Deverdade** é um site educacional que busca tornar mais acessível o conhecimento sobre as leis brasileiras, os direitos e deveres dos cidadãos e o funcionamento das instituições públicas.
+**Direitos & Deverdade** é um site educacional que torna acessível o conhecimento sobre as leis brasileiras, os direitos e deveres dos cidadãos e as funções dos agentes e órgãos públicos.
 
-O conteúdo é apresentado de maneira visual, objetiva e interativa, utilizando exemplos de situações cotidianas para aproximar assuntos jurídicos e políticos da realidade da população. A proposta é substituir o excesso de linguagem técnica, o chamado "juridiquês" e "politiquês", por explicações simples e acessíveis.
+O conteúdo é apresentado de forma visual, objetiva e interativa, utilizando exemplos do cotidiano para substituir o excesso de linguagem técnica, o chamado "juridiquês" e "politiquês".
 
-O projeto possui caráter **social, gratuito e não partidário**, com foco na educação cidadã e no fortalecimento da participação consciente na sociedade brasileira.
+O projeto tem caráter **social, gratuito e não partidário**, com foco na democratização do conhecimento jurídico e político e no fortalecimento da cidadania brasileira.
 
 ## Problema e público-alvo
 
 **Problema:** apesar do acesso formal à informação, grande parte da população brasileira enfrenta dificuldades para compreender seus direitos, deveres, leis e instituições. A linguagem excessivamente técnica dos materiais jurídicos e políticos contribui para o analfabetismo jurídico e político, dificultando o exercício da cidadania e a identificação de situações de violação de direitos.
 
-**Público-alvo:** jovens a partir de 16 anos e adultos, especialmente pessoas com pouco acesso prévio à educação jurídica e política. O projeto também pode ser utilizado por escolas de ensino médio, cursinhos, projetos sociais e organizações interessadas em educação cívica.
+**Público-alvo:** jovens a partir de 16 anos e adultos, especialmente pessoas com pouco acesso prévio à educação jurídica e política formal. O projeto também pode ser utilizado por escolas de ensino médio, cursinhos, projetos sociais e organizações interessadas em educação cívica.
 
-## Objetivos de Desenvolvimento Sustentável
+### Objetivos de Desenvolvimento Sustentável
 
 O projeto está alinhado aos seguintes Objetivos de Desenvolvimento Sustentável (ODS) da Organização das Nações Unidas:
 
@@ -53,7 +53,7 @@ O projeto está alinhado aos seguintes Objetivos de Desenvolvimento Sustentável
 |-----|------|-----------------------|
 | 4 | Educação de Qualidade | Democratização do conhecimento jurídico e político. |
 | 10 | Redução das Desigualdades | Ampliação do acesso à informação e aos direitos. |
-| 16 | Paz, Justiça e Instituições Fortes | Incentivo à cidadania, à justiça e à compreensão das instituições. |
+| 16 | Paz, Justiça e Instituições Fortes | Incentivo à cidadania e à compreensão das instituições. |
 
 **Setor da sociedade:** Terceiro Setor (iniciativa sem fins lucrativos).
 
@@ -65,18 +65,19 @@ O projeto está alinhado aos seguintes Objetivos de Desenvolvimento Sustentável
 
 O site está organizado em páginas temáticas que apresentam informações, exemplos práticos e recursos interativos.
 
-### Páginas principais
+### Páginas do projeto
 
-- **Página Inicial:** apresentação do projeto, introdução à proposta e acesso às principais áreas de conteúdo.
-- **Direitos e Deveres:** explicação das diferenças entre direitos e deveres, exemplos do cotidiano e contextualização histórica de conquistas sociais.
-- **Conheça as Leis:** catálogo de normas brasileiras com pesquisa por palavra-chave e filtro por categoria.
-- **Quem faz as leis?:** apresentação dos três Poderes da República e explicação das etapas de elaboração de uma lei federal ordinária.
-- **Como usar seus direitos:** orientações práticas sobre como agir diante de possíveis violações de direitos, buscar apoio e encontrar canais de atendimento.
-- **Quiz:** atividade interativa com oito perguntas, correção automática, pontuação e explicações relacionadas às respostas.
+- **Página Inicial:** apresentação do projeto e acesso às principais áreas de conteúdo.
+- **Direitos e Deveres:** explicação das diferenças entre direitos e deveres, com exemplos e atividade interativa.
+- **Conheça as Leis:** apresentação de legislações brasileiras e suas respectivas finalidades.
+- **Quem faz as leis?:** apresentação dos três Poderes e explicação sobre os participantes e as etapas do processo legislativo.
+- **Como usar seus direitos:** orientações e situações práticas sobre como agir diante de possíveis violações de direitos.
+- **Quiz:** atividade interativa com oito perguntas relacionadas aos conteúdos apresentados no site.
+- **Créditos das imagens:** identificação e atribuição das fotografias utilizadas no projeto.
 
 ### Conteúdos sobre legislação
 
-A seção "Conheça as Leis" apresenta páginas individuais para oito temas:
+A seção "Conheça as Leis" possui páginas individuais para oito temas:
 
 1. Constituição Federal;
 2. Estatuto da Criança e do Adolescente (ECA);
@@ -87,20 +88,17 @@ A seção "Conheça as Leis" apresenta páginas individuais para oito temas:
 7. Combate ao racismo;
 8. Lei Maria da Penha.
 
-Cada página apresenta a finalidade da legislação, explicações sobre suas principais proteções e exemplos de situações cotidianas, além de referências para consulta das fontes oficiais.
+### Recursos interativos
 
-### Recursos e interações
-
-- Navegação por menu superior, com adaptação para telas menores.
-- Cards e elementos visuais para organização dos conteúdos.
-- Linha do tempo interativa sobre conquistas históricas.
-- Pesquisa textual e filtragem por categoria na seção de legislação.
-- Quiz com oito questões, validação das respostas, pontuação e feedback explicativo.
-- Links entre conteúdos relacionados para facilitar a navegação.
-- Orientações práticas e contextualizadas sobre o exercício da cidadania.
-- Página específica de créditos e fontes das fotografias.
+- Navegação por menu superior e links entre páginas.
+- Cards para apresentação dos conteúdos.
+- Linha do tempo sobre conquistas históricas.
+- Pesquisa e filtragem de conteúdos sobre legislação.
+- Quiz com oito questões, correção automática e pontuação.
+- Feedback explicativo para as respostas do quiz.
+- Links para consulta de conteúdos relacionados.
 - Layout responsivo para computadores, tablets e celulares.
-- Recursos de acessibilidade, como estrutura semântica, textos alternativos e identificação de estados interativos.
+- Elementos de acessibilidade e organização semântica do conteúdo.
 
 O sistema não exige cadastro ou login, reduzindo as barreiras de acesso.
 
@@ -110,9 +108,9 @@ O projeto utiliza tecnologias fundamentais de desenvolvimento web, com separaç�
 
 | Tecnologia | Utilização |
 |------------|------------|
-| **HTML5** | Estruturação semântica e organização do conteúdo das páginas. |
-| **CSS3** | Estilização, identidade visual, animações e responsividade. |
-| **JavaScript** | Implementação das interações, navegação, filtros e funcionamento do quiz. |
+| **HTML5** | Estruturação e organização do conteúdo das páginas. |
+| **CSS3** | Estilização, identidade visual e responsividade. |
+| **JavaScript** | Implementação das interações, filtros e funcionamento do quiz. |
 | **Git** | Controle de versão do código-fonte. |
 | **GitHub** | Hospedagem do repositório e colaboração entre integrantes. |
 | **Jira** | Organização e acompanhamento das atividades utilizando Scrum e Kanban. |
@@ -121,39 +119,43 @@ O projeto utiliza tecnologias fundamentais de desenvolvimento web, com separaç�
 
 - Desenvolvimento front-end sem utilização de frameworks.
 - Arquivos HTML, CSS e JavaScript organizados separadamente.
-- Dados e respostas do quiz armazenados localmente nos scripts.
 - Funcionamento diretamente no navegador.
-- Não utiliza banco de dados ou back-end no MVP.
-- Não exige autenticação, instalação de dependências ou ferramentas de compilação.
-- Os conteúdos principais permanecem disponíveis mesmo sem JavaScript, embora determinadas interações dependam dele.
+- Não utiliza banco de dados ou back-end na versão atual.
+- Não exige instalação de dependências ou ferramentas de compilação.
+- As respostas do quiz são processadas localmente por JavaScript.
 
 ## Estrutura do projeto
 
-O repositório está organizado para separar o código-fonte, os recursos visuais, a documentação e os materiais auxiliares.
+A organização atual do repositório é apresentada abaixo:
 
 ```text
 .
+├── .gitignore
+├── LICENSE
+├── README.md
+│
 ├── assets/
 │   ├── icones/
 │   │   └── favicon.png
+│   │
 │   └── imagens/
 │       ├── fotos históricas
-│       ├── imagens das páginas principais
-│       ├── imagens dos cards
-│       └── imagens dos conteúdos sobre legislação
+│       ├── imagens da página inicial
+│       ├── imagens dos conteúdos
+│       └── imagens das legislações
 │
 ├── config/
 │   └── Arquivos de configuração
 │
 ├── database/
-│   └── Materiais reservados para futuras implementações
+│   └── Scripts e modelos de banco de dados
 │
 ├── docs/
-│   ├── Documento - 1º Entrega - Javacessíveis.pdf
-│   ├── Documento - 2º Entrega - Javacessiveis.pdf
+│   ├── Documento - 1ª Entrega - Javacessíveis.pdf
+│   ├── Documento - 2ª Entrega - Javacessiveis.pdf
 │   ├── Wireframe 1.png
 │   ├── Wireframe 2.png
-│   └── Documentação complementar
+│   └── Modelo de Relatório de Curricularização da Extensão.docx
 │
 ├── scripts/
 │   └── Scripts auxiliares
@@ -194,13 +196,14 @@ O repositório está organizado para separar o código-fonte, os recursos visuai
 │           ├── combate-ao-racismo.html
 │           └── maria-da-penha.html
 │
-├── test/
-│   └── Protótipos e versões anteriores
-│
-├── .gitignore
-├── LICENSE
-└── README.md
+└── test/
+    └── prototipo/
+        ├── v2/
+        └── versão final/
+            └── Prototipo_versao4/
 ```
+
+**Observação:** o diretório `test/` contém protótipos e versões anteriores do projeto. A versão atual do site está localizada em `src/`.
 
 ## Como executar
 
@@ -230,8 +233,6 @@ Para isso:
 2. Localize `src/index.html`.
 3. Clique com o botão direito no arquivo.
 4. Selecione **Open with Live Server**.
-
-A página inicial será aberta no navegador.
 
 ## Organização do trabalho
 
@@ -283,29 +284,27 @@ Adiciona página Quem faz as leis
 
 ## Roadmap
 
-### Desenvolvimento do MVP
+### Desenvolvimento do projeto
 
 - [x] Estrutura inicial do projeto.
 - [x] Identidade visual e navegação entre páginas.
 - [x] Página inicial.
 - [x] Página de direitos e deveres.
-- [x] Página de apresentação das leis.
+- [x] Página de apresentação das legislações.
 - [x] Páginas individuais para os oito temas de legislação.
 - [x] Página sobre os três Poderes e o processo legislativo.
 - [x] Página com orientações para o exercício dos direitos.
 - [x] Página de créditos das imagens.
-- [x] Pesquisa e filtragem de legislação.
-- [x] Linha do tempo interativa.
+- [x] Pesquisa e filtragem de legislações.
 - [x] Quiz com oito perguntas, pontuação e feedback.
 - [x] Organização dos arquivos CSS e JavaScript.
-- [x] Adaptação do layout para diferentes tamanhos de tela.
 - [ ] Revisão final de acessibilidade e responsividade.
 - [ ] Validação completa das páginas e funcionalidades.
 - [ ] Preparação e finalização da entrega acadêmica.
 
 ### Possíveis evoluções futuras
 
-As seguintes funcionalidades poderão ser consideradas em versões posteriores, conforme a disponibilidade de tempo e os objetivos de novas etapas do projeto:
+As seguintes funcionalidades poderão ser consideradas em versões posteriores:
 
 - Sistema de cadastro e autenticação de usuários.
 - Perfis personalizados com avatar.
@@ -326,7 +325,7 @@ Entre eles estão:
 - Documento referente à primeira entrega do projeto.
 - Documento referente à segunda entrega do projeto.
 - Wireframes utilizados no planejamento da interface.
-- Documentação complementar relacionada ao desenvolvimento e à curricularização da extensão.
+- Modelo de relatório de curricularização da extensão.
 
 Esses materiais registram decisões, planejamento e evolução do projeto ao longo das etapas acadêmicas.
 
@@ -354,7 +353,7 @@ Grupo **Javacessíveis** — Turma 102.
 
 O projeto encontra-se em fase de implementação e aprimoramento do MVP, com as principais páginas e funcionalidades já desenvolvidas.
 
-**Previsão de primeira versão:** dezembro de 2026.
+**Previsão da primeira versão:** dezembro de 2026.
 
 ## Licença
 
