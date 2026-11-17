@@ -1,4 +1,3 @@
-
 # Direitos & Deverdade
 
 > Educação cívica e jurídica em linguagem simples, para quem quer entender seus direitos, seus deveres e como o país funciona.
@@ -17,14 +16,12 @@ Projeto Integrador da disciplina **PI: Desenvolvimento de Sistemas Web** (códig
 
 - [Descrição](#descrição)
 - [Problema e público-alvo](#problema-e-público-alvo)
-- [Objetivos de Desenvolvimento Sustentável](#objetivos-de-desenvolvimento-sustentável)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Estrutura do projeto](#estrutura-do-projeto)
 - [Como executar](#como-executar)
 - [Organização do trabalho](#organização-do-trabalho)
 - [Roadmap](#roadmap)
-- [Documentação](#documentação)
 - [Integrantes](#integrantes)
 - [Status do projeto](#status-do-projeto)
 - [Licença](#licença)
@@ -33,305 +30,144 @@ Projeto Integrador da disciplina **PI: Desenvolvimento de Sistemas Web** (códig
 
 ## Descrição
 
-**Direitos & Deverdade** é um site educacional que torna acessível o conhecimento sobre as leis brasileiras, os direitos e deveres dos cidadãos e as funções dos agentes e órgãos públicos.
+**Direitos & Deverdade** é um site educacional que torna acessível o conhecimento sobre as leis brasileiras, os direitos e deveres dos cidadãos e as funções dos agentes e órgãos públicos. O conteúdo é apresentado de forma visual, objetiva e interativa, com exemplos do cotidiano no lugar do "juridiquês" e do "politiquês".
 
-O conteúdo é apresentado de forma visual, objetiva e interativa, utilizando exemplos do cotidiano para substituir o excesso de linguagem técnica, o chamado "juridiquês" e "politiquês".
-
-O projeto tem caráter **social, gratuito e não partidário**, com foco na democratização do conhecimento jurídico e político e no fortalecimento da cidadania brasileira.
+O projeto tem caráter **social, gratuito e não partidário**, com foco na **sociedade brasileira**.
 
 ## Problema e público-alvo
 
-**Problema:** apesar do acesso formal à informação, grande parte da população brasileira enfrenta dificuldades para compreender seus direitos, deveres, leis e instituições. A linguagem excessivamente técnica dos materiais jurídicos e políticos contribui para o analfabetismo jurídico e político, dificultando o exercício da cidadania e a identificação de situações de violação de direitos.
+**Problema:** apesar do acesso formal à informação, grande parte da população brasileira enfrenta analfabetismo jurídico e político, agravado pela linguagem técnica de leis, decisões e materiais institucionais. As consequências são vulnerabilidade diante de abusos, baixa compreensão do papel das instituições e voto pouco informado.
 
-**Público-alvo:** jovens a partir de 16 anos e adultos, especialmente pessoas com pouco acesso prévio à educação jurídica e política formal. O projeto também pode ser utilizado por escolas de ensino médio, cursinhos, projetos sociais e organizações interessadas em educação cívica.
+**Público-alvo:** jovens a partir de 16 anos (idade mínima do voto facultativo) e adultos aptos a votar, com ênfase em pessoas com pouco acesso prévio à educação jurídica e política formal. Também pode ser usado por escolas de ensino médio, cursinhos, projetos sociais e ONGs de educação cívica.
 
-### Objetivos de Desenvolvimento Sustentável
+**Alinhamento com os ODS:**
 
-O projeto está alinhado aos seguintes Objetivos de Desenvolvimento Sustentável (ODS) da Organização das Nações Unidas:
+| ODS | Tema |
+|-----|------|
+| 4 | Educação de Qualidade |
+| 10 | Redução das Desigualdades |
+| 16 | Paz, Justiça e Instituições Fortes |
 
-| ODS | Tema | Relação com o projeto |
-|-----|------|-----------------------|
-| 4 | Educação de Qualidade | Democratização do conhecimento jurídico e político. |
-| 10 | Redução das Desigualdades | Ampliação do acesso à informação e aos direitos. |
-| 16 | Paz, Justiça e Instituições Fortes | Incentivo à cidadania e à compreensão das instituições. |
-
-**Setor da sociedade:** Terceiro Setor (iniciativa sem fins lucrativos).
-
-**Tipo de impacto:** Social.
-
-**Valor principal:** Educação.
+**Setor da sociedade:** Terceiro Setor (iniciativa sem fins lucrativos). **Tipo de impacto:** social. **Valor principal:** educação.
 
 ## Funcionalidades
 
-O site está organizado em páginas temáticas que apresentam informações, exemplos práticos e recursos interativos.
+Páginas do MVP:
 
-### Páginas do projeto
+- **Página Inicial:** apresentação do projeto e escolha de tema
+- **Direitos e Deveres:** diferença entre os dois conceitos, com atividade interativa
+- **Conheça as Leis:** áreas temáticas e finalidades das normas
+- **Quem faz as leis?:** participantes e etapas do processo legislativo, em itens expansíveis
+- **Como usar seus direitos:** orientações e situações práticas sobre o que fazer se seus direitos forem feridos
 
-- **Página Inicial:** apresentação do projeto e acesso às principais áreas de conteúdo.
-- **Direitos e Deveres:** explicação das diferenças entre direitos e deveres, com exemplos e atividade interativa.
-- **Conheça as Leis:** apresentação de legislações brasileiras e suas respectivas finalidades.
-- **Quem faz as leis?:** apresentação dos três Poderes e explicação sobre os participantes e as etapas do processo legislativo.
-- **Como usar seus direitos:** orientações e situações práticas sobre como agir diante de possíveis violações de direitos.
-- **Quiz:** atividade interativa com oito perguntas relacionadas aos conteúdos apresentados no site.
-- **Créditos das imagens:** identificação e atribuição das fotografias utilizadas no projeto.
+Recursos do sistema:
 
-### Conteúdos sobre legislação
-
-A seção "Conheça as Leis" possui páginas individuais para oito temas:
-
-1. Constituição Federal;
-2. Estatuto da Criança e do Adolescente (ECA);
-3. Proteção contra o bullying;
-4. ECA Digital;
-5. Código de Defesa do Consumidor (CDC);
-6. Lei Brasileira de Inclusão (LBI);
-7. Combate ao racismo;
-8. Lei Maria da Penha.
-
-### Recursos interativos
-
-- Navegação por menu superior e links entre páginas.
-- Cards para apresentação dos conteúdos.
-- Linha do tempo sobre conquistas históricas.
-- Pesquisa e filtragem de conteúdos sobre legislação.
-- Quiz com oito questões, correção automática e pontuação.
-- Feedback explicativo para as respostas do quiz.
-- Links para consulta de conteúdos relacionados.
-- Layout responsivo para computadores, tablets e celulares.
-- Elementos de acessibilidade e organização semântica do conteúdo.
-
-O sistema não exige cadastro ou login, reduzindo as barreiras de acesso.
+- Navegação por menu superior e botões de continuidade
+- Cards, itens expansíveis e desafios interativos com feedback ao usuário
+- Layout responsivo (computador, tablet e celular)
+- Sem cadastro ou login, para reduzir barreiras de entrada
 
 ## Tecnologias utilizadas
 
-O projeto utiliza tecnologias fundamentais de desenvolvimento web, com separação entre estrutura, apresentação visual e comportamento das páginas.
+O projeto é um site **front-end simples**, com arquivos separados por responsabilidade:
 
-| Tecnologia | Utilização |
-|------------|------------|
-| **HTML5** | Estruturação e organização do conteúdo das páginas. |
-| **CSS3** | Estilização, identidade visual e responsividade. |
-| **JavaScript** | Implementação das interações, filtros e funcionamento do quiz. |
-| **Git** | Controle de versão do código-fonte. |
-| **GitHub** | Hospedagem do repositório e colaboração entre integrantes. |
-| **Jira** | Organização e acompanhamento das atividades utilizando Scrum e Kanban. |
+| Tecnologia | Uso | Arquivos |
+|------------|-----|----------|
+| **HTML5** | Estrutura e conteúdo das páginas | `.html` |
+| **CSS3** | Identidade visual e responsividade | `.css` |
+| **JavaScript** | Interações, quizzes, navegação dinâmica e dados locais | `.js` |
 
-### Características técnicas
+Ferramentas de apoio: **Git e GitHub** (versionamento) e **Jira** (Scrum e Kanban).
 
-- Desenvolvimento front-end sem utilização de frameworks.
-- Arquivos HTML, CSS e JavaScript organizados separadamente.
-- Funcionamento diretamente no navegador.
-- Não utiliza banco de dados ou back-end na versão atual.
-- Não exige instalação de dependências ou ferramentas de compilação.
-- As respostas do quiz são processadas localmente por JavaScript.
+> **Nota:** o MVP roda direto no navegador, a partir de arquivos locais. Não utiliza banco de dados, back-end, API, autenticação, frameworks, ferramentas de build nem hospedagem.
 
 ## Estrutura do projeto
 
-A organização atual do repositório é apresentada abaixo:
-
-```text
+```
 .
-├── .gitignore
-├── LICENSE
-├── README.md
-│
-├── assets/
-│   ├── icones/
-│   │   └── favicon.png
-│   │
-│   └── imagens/
-│       ├── fotos históricas
-│       ├── imagens da página inicial
-│       ├── imagens dos conteúdos
-│       └── imagens das legislações
-│
-├── config/
-│   └── Arquivos de configuração
-│
-├── database/
-│   └── Scripts e modelos de banco de dados
-│
-├── docs/
-│   ├── Documento - 1ª Entrega - Javacessíveis.pdf
-│   ├── Documento - 2ª Entrega - Javacessiveis.pdf
-│   ├── Wireframe 1.png
-│   ├── Wireframe 2.png
-│   └── Modelo de Relatório de Curricularização da Extensão.docx
-│
-├── scripts/
-│   └── Scripts auxiliares
-│
-├── src/
-│   ├── index.html
-│   │
-│   ├── css/
+├── docs/        # Documentação (PDFs das entregas, wireframes, protótipos)
+├── src/         # Código-fonte do site
+│   ├── index.html                   # Página Inicial
+│   ├── pages/                       # Demais páginas (um arquivo .html por tema)
+│   │   ├── direitos-e-deveres.html
+│   │   └── conheca-as-leis.html
+│   ├── css/                         # Estilos
 │   │   ├── style.css
 │   │   ├── direitos-e-deveres.css
-│   │   ├── conheca-as-leis.css
 │   │   ├── lei-detalhe.css
-│   │   ├── quem-faz-as-leis.css
-│   │   ├── como-usar-seus-direitos.css
-│   │   └── quiz.css
-│   │
-│   ├── js/
-│   │   ├── main.js
-│   │   ├── direitos-e-deveres.js
-│   │   ├── conheca-as-leis.js
-│   │   └── quiz.js
-│   │
-│   └── pages/
-│       ├── direitos-e-deveres.html
-│       ├── conheca-as-leis.html
-│       ├── quem-faz-as-leis.html
-│       ├── como-usar-seus-direitos.html
-│       ├── quiz.html
-│       ├── creditos-imagens.html
-│       │
-│       └── leis/
-│           ├── constituicao.html
-│           ├── eca.html
-│           ├── bullying.html
-│           ├── eca-digital.html
-│           ├── consumidor.html
-│           ├── inclusao.html
-│           ├── combate-ao-racismo.html
-│           └── maria-da-penha.html
-│
-└── test/
-    └── prototipo/
-        ├── v2/
-        └── versão final/
-            └── Prototipo_versao4/
+│   │   └── conheça-as-leis.css
+│   └── js/                          # Scripts
+│       ├── main.js
+│       ├── direitos-e-deveres.js
+│       └── conheça-as-leis.js
+├── assets/      # Imagens, ícones, vídeos e logos
+├── tests/       # Roteiros de testes e validação
+├── database/    # Reservado para etapas futuras (não usado no MVP)
+├── config/      # Arquivos de configuração (opcional)
+├── scripts/     # Scripts auxiliares do projeto
+├── README.md    # Explicação principal do projeto
+├── .gitignore   # Arquivos e pastas ignorados
+└── LICENSE      # Licença do projeto
 ```
 
-**Observação:** o diretório `test/` contém protótipos e versões anteriores do projeto. A versão atual do site está localizada em `src/`.
+> Ajuste os nomes de arquivos e subpastas de `src/` conforme a organização real do repositório.
 
 ## Como executar
 
-O projeto não necessita de instalação de dependências ou configuração de servidor.
-
-### 1. Clonar o repositório
+Não é necessário instalar nada nem hospedar o site: o projeto é entregue como arquivos locais, que podem ser abertos diretamente no navegador ou publicados por quem for avaliar.
 
 ```bash
+# 1. Clone o repositório
 git clone <URL-DO-REPOSITORIO>
+
+# 2. Entre na pasta do projeto
+cd <NOME-DA-PASTA>
 ```
 
-### 2. Entrar na pasta do projeto
+Depois, abra o arquivo `src/index.html` no navegador (clique duas vezes ou arraste para a janela do navegador).
 
-```bash
-cd Direitos-e-Deverdade-add-pages
-```
-
-### 3. Abrir o site
-
-Abra o arquivo `src/index.html` diretamente no navegador.
-
-Também é possível utilizar a extensão **Live Server**, disponível no Visual Studio Code, para executar o projeto em um servidor local e atualizar automaticamente as páginas durante o desenvolvimento.
-
-Para isso:
-
-1. Abra a pasta do projeto no Visual Studio Code.
-2. Localize `src/index.html`.
-3. Clique com o botão direito no arquivo.
-4. Selecione **Open with Live Server**.
+**Dica:** no VS Code, a extensão **Live Server** recarrega a página automaticamente a cada alteração. Clique com o botão direito em `index.html` e escolha *Open with Live Server*.
 
 ## Organização do trabalho
 
-O desenvolvimento é organizado utilizando uma combinação de metodologias ágeis:
+O desenvolvimento segue **Scrum** (prioridades e ciclos de entrega) combinado com **Kanban** (visualização do andamento das tarefas), com quadro no Jira. Estados das tarefas: **A Fazer → Em Andamento → Concluído**.
 
-- **Scrum:** organização do desenvolvimento em sprints, definição de prioridades e acompanhamento das entregas.
-- **Kanban:** visualização do andamento das atividades e identificação das tarefas pendentes, em execução e concluídas.
-
-O Jira é utilizado como ferramenta de gerenciamento e acompanhamento das atividades do grupo.
-
-### Fluxo de atividades
-
-As tarefas são organizadas nos seguintes estados:
-
-- **A Fazer:** atividades planejadas e ainda não iniciadas.
-- **Em Andamento:** atividades em desenvolvimento.
-- **Concluído:** atividades finalizadas.
-
-### Planejamento das sprints
+Planejamento das sprints:
 
 | Sprint | Foco |
 |--------|------|
-| 1 | Estrutura inicial do projeto, identidade visual e navegação entre páginas. |
-| 2 | Desenvolvimento das páginas de conteúdo utilizando HTML e CSS. |
-| 3 | Implementação das interações em JavaScript, filtros e quiz. |
-| 4 | Testes, revisão textual, acessibilidade, responsividade e preparação da entrega. |
+| 1 | Estrutura do projeto, identidade visual e navegação entre páginas |
+| 2 | Implementação das páginas de conteúdo (HTML e CSS) |
+| 3 | Interações em JavaScript, quiz e responsividade |
+| 4 | Testes, revisão textual, acessibilidade, correções e preparação da entrega |
 
-### Convenções de Git
+### Convenções de Git (sugestão)
 
-Para manter a organização do código-fonte e facilitar a colaboração, são adotadas as seguintes convenções:
-
-- Branch principal: `main`.
-- Criação de branches específicas para cada tarefa.
-- Identificação das branches utilizando o código correspondente no Jira.
-- Commits objetivos, descrevendo as alterações realizadas.
-- Revisão das alterações antes da integração à branch principal.
-
-Exemplo de nomenclatura:
-
-```text
-feature/JV-6-quem-faz-as-leis-html
-```
-
-Exemplo de commit:
-
-```text
-Adiciona página Quem faz as leis
-```
+- Branch principal: `main` (sempre estável)
+- Uma branch por tarefa, nomeada com o código do Jira, por exemplo `feature/JV-6-quem-somos-html`
+- Commits curtos e no imperativo, por exemplo `Adiciona página Quem faz as leis`
+- Pull Request revisado por pelo menos um integrante antes do merge
 
 ## Roadmap
 
-### Desenvolvimento do projeto
+- [x] Estrutura do site, navegação e identidade visual
+- [x] Páginas temáticas com componentes interativos
+- [ ] Quiz gamificado por tema de lei, com pontuação instantânea
+- [ ] Pergunta do dia, selecionada automaticamente pela data
+- [ ] Persistência local de progresso, pontuação e sequência de dias
+- [ ] Busca e filtro de conteúdos por tema ou palavra-chave
+- [ ] Revisão de responsividade e acessibilidade
+- [ ] Revisão da semântica das tags HTML (`header`, `nav`, `main`, `section`, `footer`, etc.)
+- [ ] Entrega dos arquivos locais ao professor
 
-- [x] Estrutura inicial do projeto.
-- [x] Identidade visual e navegação entre páginas.
-- [x] Página inicial.
-- [x] Página de direitos e deveres.
-- [x] Página de apresentação das legislações.
-- [x] Páginas individuais para os oito temas de legislação.
-- [x] Página sobre os três Poderes e o processo legislativo.
-- [x] Página com orientações para o exercício dos direitos.
-- [x] Página de créditos das imagens.
-- [x] Pesquisa e filtragem de legislações.
-- [x] Quiz com oito perguntas, pontuação e feedback.
-- [x] Organização dos arquivos CSS e JavaScript.
-- [ ] Revisão final de acessibilidade e responsividade.
-- [ ] Validação completa das páginas e funcionalidades.
-- [ ] Preparação e finalização da entrega acadêmica.
+**Evoluções futuras (próximos semestres):**
 
-### Possíveis evoluções futuras
-
-As seguintes funcionalidades poderão ser consideradas em versões posteriores:
-
-- Sistema de cadastro e autenticação de usuários.
-- Perfis personalizados com avatar.
-- Banco de dados para armazenamento de progresso e histórico de atividades.
-- Ranking e acompanhamento de pontuação dos quizzes.
-- Sistema de sequência de dias e incentivo à aprendizagem contínua.
-- Pergunta do dia selecionada automaticamente.
-- Busca ampliada de conteúdos.
-- Integração com APIs externas para atualização de informações legislativas.
-- Versão mobile com possibilidade de funcionamento offline e notificações.
-
-## Documentação
-
-Os materiais de apoio e registros do desenvolvimento estão disponíveis no diretório `docs/`.
-
-Entre eles estão:
-
-- Documento referente à primeira entrega do projeto.
-- Documento referente à segunda entrega do projeto.
-- Wireframes utilizados no planejamento da interface.
-- Modelo de relatório de curricularização da extensão.
-
-Esses materiais registram decisões, planejamento e evolução do projeto ao longo das etapas acadêmicas.
+- Login e perfil de usuário, com avatar e conexão com outros usuários
+- Banco de dados para histórico de quizzes, pontuação e acertos/erros
+- Consumo de APIs externas para atualização de conteúdos
+- Versão mobile, com modo offline e notificações push
 
 ## Integrantes
-
-Grupo **Javacessíveis** — Turma 102.
 
 | Nome | RA | Responsabilidade |
 |------|----|------------------|
@@ -341,22 +177,14 @@ Grupo **Javacessíveis** — Turma 102.
 | Pedro Andrade de Figueiredo | 26010179 | Design e Documentação |
 | Yann Coelho Amaro | 26021255 | Design e Documentação |
 
-**Professor:** Fernando Luiz de Almeida Silveira.
-
-**Instituição:** Pontifícia Universidade Católica de Campinas (PUC-Campinas).
-
-**Disciplina:** PI: Desenvolvimento de Sistemas Web — Código 218040.
+**Professor:** Fernando Luiz de Almeida Silveira
 
 ## Status do projeto
 
 🚧 **Em desenvolvimento**
 
-O projeto encontra-se em fase de implementação e aprimoramento do MVP, com as principais páginas e funcionalidades já desenvolvidas.
-
-**Previsão da primeira versão:** dezembro de 2026.
+Primeira versão estimada para: **dezembro de 2026**
 
 ## Licença
 
-Licença a definir.
-
-A licença de distribuição e utilização do projeto deverá ser estabelecida pelo grupo e documentada neste repositório.
+Licença a definir. Adicione o arquivo `LICENSE` na raiz do repositório (por exemplo, MIT) e atualize esta seção.
