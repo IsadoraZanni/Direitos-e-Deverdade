@@ -215,7 +215,7 @@ git clone <URL-DO-REPOSITORIO>
 ### 2. Entrar na pasta do projeto
 
 ```bash
-cd Direitos-e-Deverdade-add-pages
+cd Direitos-e-Deverdade
 ```
 
 ### 3. Abrir o site
